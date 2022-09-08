@@ -19,6 +19,13 @@ body {
     font-size: 70px;
 }
 
+.title-a:hover {
+    color: #FFDA25;
+}
+
+.title-b:hover {
+    color: #F51A12;
+}
 /******************** Navbar ********************/
 
 li {
@@ -29,3 +36,12 @@ li {
 li > a {
     color: black !important;
 }
+
+.search {
+    border-color: black;
+}
+
+.search:hover {
+    background-color: #FFDA25;
+}
+
