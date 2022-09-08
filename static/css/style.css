@@ -28,6 +28,12 @@ image {
     font-size: 70px;
 }
 
+#title-separator {
+    border-top: 1px solid black;
+    width: 50vw;
+    margin-left: 25vw;
+}
+
 .title-a:hover {
     color: #FFDA25;
 }
@@ -53,3 +59,4 @@ li > a {
 .search:hover {
     background-color: #FFDA25;
 }
+
