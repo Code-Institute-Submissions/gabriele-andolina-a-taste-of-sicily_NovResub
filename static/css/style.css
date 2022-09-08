@@ -10,11 +10,22 @@
 
 body {
     height: 100%;
-    font-family: "Crimson Text", "Times New Roman", sans-serif;
+    font-family: "Andada Pro", "Times New Roman", sans-serif;
     font-weight: 400;
 }
 
 #shop-name {
     font-family: 'Dancing Script', 'Times New Roman', sans-serif;
-    font-size: 80px;
+    font-size: 70px;
+}
+
+/******************** Navbar ********************/
+
+li {
+    font-family: 'Andada Pro', 'Times New Roman', sans-serif;
+    font-size: 18px;
+}
+
+li > a {
+    color: black !important;
 }
