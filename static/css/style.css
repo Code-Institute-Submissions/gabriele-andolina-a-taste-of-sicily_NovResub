@@ -8,10 +8,19 @@
     border: none;
 }
 
-body {
+html {
     height: 100%;
+}
+
+body {
+    background: url('/media/hero-image.webp');
+    background-size: cover;
     font-family: "Andada Pro", "Times New Roman", sans-serif;
     font-weight: 400;
+}
+
+image {
+    height: 100px;
 }
 
 #shop-name {
@@ -44,4 +53,3 @@ li > a {
 .search:hover {
     background-color: #FFDA25;
 }
-

@@ -17,15 +17,10 @@
 
   <body>
 
-    <header class="container-fluid">
-      <!-- Shop Name/Title -->
+    <header class="container-fluid fixed-top bg-white">
+      <!-- Shop Name -->
       <div>
-        <h1 id="shop-name" class="text-center pt-4 pb-2">
-          <span class="title-a">A</span> 
-          <span class="title-b">Taste</span> 
-          <span class="title-a">Of</span>
-          <span class="title-b">Sicily</span>
-        </h1>
+        <h1 id="shop-name" class="text-center pt-4 pb-2">A <span class="title-a">Taste </span>Of <span class="title-b">Sicily</span></h1>
       </div>
 
       <!-- Navbar -->
@@ -65,6 +60,9 @@
         </div>
       </nav>
     </header>
+
+    {% block page_header %}
+    {% endblock %}
 
     {% block content %}
     {% endblock %}
