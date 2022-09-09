@@ -20,7 +20,11 @@
     <header class="container-fluid fixed-top bg-white">
       <!-- Shop Name -->
       <div class="site-title">
-        <h1 id="shop-name" class="text-center pt-4 pb-2">A <span class="title-a">Taste </span>Of <span class="title-b">Sicily</span></h1>
+        <a href="{% url 'home' %}">
+          <h1 id="shop-name" class="text-center pt-3">
+            <span class="title-a">A Taste O</span><span class="title-b">f Sicily</span>
+          </h1>
+        </a>
       </div>
       <hr id="title-separator">
 
@@ -33,31 +37,51 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="{% url 'home' %}">Home <i class="fa-solid fa-house"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" href="#">About Us <i class="fa-solid fa-circle-info"></i></a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                Shop
-              </a>
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Shop <i class="fa-solid fa-shop"></i></a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Wine</a>
-                <a class="dropdown-item" href="#">Food</a>
+                <a class="dropdown-item" href="#">All Products <i class="fa-solid fa-basket-shopping"></i></a>
+                <a class="dropdown-item" href="#">Wine <i class="fa-solid fa-wine-glass"></i></a>
+                <a class="dropdown-item" href="#">Food <i class="fa-solid fa-utensils"></i></a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Experience Sicily</a>
+              <a class="nav-link" href="#">Experience Sicily <i class="fa-solid fa-suitcase"></i></a>
+            </li>
+            <div class="my-auto">
+              <form method="GET" action="" class="form-inline my-2 my-lg-0  pl-5">
+                <input class="form-control mr-sm-2 border border-dark" type="text" name="q" placeholder="Search our products" aria-label="Search">
+                <button class="btn my-2 my-sm-0 border border-dark" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+            </div>
+          </ul>
+          <ul class="navbar-nav mr-auto text-align-right">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                My Account <i class="fa-solid fa-user"></i>
+              </a>
+              <div class="dropdown-menu">
+                {% if request.user.is_authenticated %}
+                  {% if request.user.is_superuser %}
+                  <a class="dropdown-item" href="#">Manage Shop <i class="fa-solid fa-boxes-stacked"></i></a>
+                  {% endif %}
+                <a class="dropdown-item" href="#">My Profile</a>
+                <a class="dropdown-item" href="% url 'account_logout %">Log Out <i class="fa-solid fa-right-from-bracket"></i></a>
+                {% else %}
+                <a class="dropdown-item" href="% url 'account_login %">Log In <i class="fa-solid fa-right-to-bracket"></i></a>
+                <a class="dropdown-item" href="% url 'account_signup %">Sign Up <i class="fa-solid fa-user-plus"></i></a>
+                {% endif %}
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">My Taste</a>
+              <a class="nav-link" href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn my-2 my-sm-0 search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </form>
         </div>
       </nav>
     </header>

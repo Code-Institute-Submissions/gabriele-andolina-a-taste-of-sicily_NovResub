@@ -28,17 +28,21 @@ image {
     font-size: 70px;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 #title-separator {
     border-top: 1px solid black;
     width: 50vw;
     margin-left: 25vw;
 }
 
-.title-a:hover {
+.title-a {
     color: #FFDA25;
 }
 
-.title-b:hover {
+.title-b {
     color: #F51A12;
 }
 /******************** Navbar ********************/
@@ -51,12 +55,3 @@ li {
 li > a {
     color: black !important;
 }
-
-.search {
-    border-color: black;
-}
-
-.search:hover {
-    background-color: #FFDA25;
-}
-
