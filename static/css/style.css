@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background: url('/media/hero-image.jpg');
+    background: url('/media/hero_image.jpg');
     background-size: cover;
     height: 100%;
     font-family: "Andada Pro", "Times New Roman", sans-serif;
