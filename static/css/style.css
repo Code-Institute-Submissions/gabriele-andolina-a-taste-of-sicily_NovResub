@@ -15,12 +15,17 @@ html {
 body {
     background: url('/media/hero-image.jpg');
     background-size: cover;
+    height: 100%;
     font-family: "Andada Pro", "Times New Roman", sans-serif;
     font-weight: 400;
 }
 
 image {
     height: 100px;
+}
+
+header {
+    background-color: #2C3333;
 }
 
 #shop-name {
@@ -39,12 +44,13 @@ a:hover {
 }
 
 .title-a {
-    color: #FFDA25;
+    color: #FFBB26;
 }
 
 .title-b {
     color: #F51A12;
 }
+
 /******************** Navbar ********************/
 
 li {
@@ -54,4 +60,29 @@ li {
 
 li > a {
     color: black !important;
+}
+
+/******************** Homepage ********************/
+
+.jumbotron {
+    width: 40vw;
+    position: relative;
+    left: 30vw;
+    top: 40vh;
+    background-color: #2C3333;
+    height: 250px;
+}
+
+.jumbotron h2 {
+    font-family: 'Dancing Script', Times New Roman, sans-serif;
+}
+
+.shop-now-btn {
+    color: #FFBB26;
+    border: 1px solid #FFBB26;
+}
+
+.shop-now-btn:hover {
+    color: #F51A12;
+    border-color: #F51A12;
 }
