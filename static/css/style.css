@@ -24,8 +24,9 @@ image {
     height: 100px;
 }
 
-header {
+.site-title {
     background-color: #2C3333;
+    width: 100vw;
 }
 
 #shop-name {
@@ -71,6 +72,7 @@ li > a {
     top: 40vh;
     background-color: #2C3333;
     height: 250px;
+    border: 2px solid #FFBB26;
 }
 
 .jumbotron h2 {
