@@ -1,0 +1,343 @@
+[{
+    "pk": 1,
+    "model": "products.wine",
+    "fields": {
+        "category": 1,
+        "name": "Spumante - Millesimato",
+        "image": "millesimato_2018.jpg",
+        "description": "A Brut sparkling wine, dry with a hint of sweetness, typical of the Etna region. Aged in stainless steel tanks for 12 months. Pairing: cheese, seafood or desserts.",
+        "grape_variety": "Grecanico",
+        "vintage": "2018",
+        "certification": "DOC",
+        "colour": "White",
+        "type": "Sparkling",
+        "alcohol_content": "12%",
+        "format": "750ml",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "price": 20.99
+    }
+}, {
+    "pk": 2,
+    "model": "products.wine",
+    "fields": {
+        "category": 1,
+        "name": "Carlo Rossi",
+        "image": "carlo_rossi_2020.jpg",
+        "description": "A classic Merlot, with hints of black cherry, raspberry, and plum. Aged for 12 months in oak casks. Pairing: meat, cheese, and cold cuts.",
+        "grape_variety": "Merlot",
+        "vintage": "2020",
+        "certification": "IGT",
+        "colour": "Red",
+        "type": "Still",
+        "alcohol_content": "12,5%",
+        "format": "750ml",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "price": 8.99
+    }
+}, {
+    "pk": 3,
+    "model": "products.wine",
+    "fields": {
+        "category": 1,
+        "name": "Corvo Rosso",
+        "image": "corvo_rosso_2010.jpg",
+        "description": "The first wine to be bottled in Sicily in 1824, Corvo Rosso has since become one of the island's most renowned wines. Intense aroma and dry taste. Pairing: grilled and roasted meat.",
+        "grape_variety": "Nero d'Avola, Nerello Mascalese, Pignatello",
+        "vintage": "2010",
+        "certification": "DOC",
+        "colour": "Red",
+        "type": "Still",
+        "alcohol_content": "13%",
+        "format": "750ml",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "price": 24.5
+    }
+}, {
+    "pk": 4,
+    "model": "products.wine",
+    "fields": {
+        "category": 1,
+        "name": "Primitivo di Manduria",
+        "image": "primitivo.jpg",
+        "description": "Originally a grape variety from Puglia, the production of Primitivo represents one of our highest achievements. Rich and tannic, with a complex scent of plum and cherries. Aged in oak casks for 24 months. Pairing: steak and aged cheeses.",
+        "grape_variety": "Primitivo",
+        "vintage": "2017",
+        "certification": "DOCG",
+        "colour": "Red",
+        "type": "Still",
+        "alcohol_content": "14%",
+        "format": "750ml",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "price": 18
+    }
+}, {
+    "pk": 5,
+    "model": "products.wine",
+    "fields": {
+        "category": 1,
+        "name": "Rosé Luigi Bosca",
+        "image": "rosé_2019.jpg",
+        "description": "Our unique rosé, the Luigi Bosca is named after a legendary figure of the island around the times of the Risorgimento. Fresh and fruity, it is the perfect companion for summer gatherings. Aged for 12 months in oak casks. Pairing: cold cuts and appetizers.",
+        "grape_variety": "Nero d'Avola, Frappato, Perricone",
+        "vintage": "2019",
+        "certification": "IGT",
+        "colour": "Rosé",
+        "type": "Still",
+        "alcohol_content": "12%",
+        "format": "750ml",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "price": 9.99
+    }
+}, {
+    "pk": 6,
+    "model": "products.wine",
+    "fields": {
+        "category": 1,
+        "name": "Cabernet-Sauvignon",
+        "image": "sauvignon2019.jpg",
+        "description": "We pride ourselves in offering this Sicilian variant of the much-renowned grape from the Bordeaux area in France. Hints of blueberries, black cherry and black currant, warm and full-bodied on the palate. Aged for 24 months in oak casks. Pairing: meat and cheese.",
+        "grape_variety": "Cabernet Sauvignon",
+        "vintage": "2019",
+        "certification": "DOC",
+        "colour": "Red",
+        "type": "Still",
+        "alcohol_content": "13%",
+        "format": "750ml",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "price": 14.99
+    }
+}, {
+    "pk": 1,
+    "model": "products.food",
+    "fields": {
+        "category": 2,
+        "type": "Pasta",
+        "name": "Conchiglie",
+        "image": "conchiglie.jpg",
+        "description": "Shell-shaped pasta, ideal to retain elaborate sauces flavoured with meat or fish. Craft product.",
+        "ingredients": "Durum wheat",
+        "certification": "IGP",
+        "format": "500g",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "shelf_life": "24 months",
+        "price": 5.99
+    }
+}, {
+    "pk": 2,
+    "model": "products.food",
+    "fields": {
+        "category": 2,
+        "type": "Pasta",
+        "name": "Fettuccine",
+        "image": "fettuccine.jpg",
+        "description": "Long and thick pasta, ideal with ragù or with our traditional pesto",
+        "ingredients": "Durum wheat",
+        "certification": "IGP",
+        "format": "500g",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "shelf_life": "24 months",
+        "price": 5.99
+    }
+}, {
+    "pk": 3,
+    "model": "products.food",
+    "fields": {
+        "category": 2,
+        "type": "Pasta",
+        "name": "Fusilli",
+        "image": "fusilli.jpg",
+        "description": "Corkscrew-shaped pasta, ideal with our pistachio pesto.",
+        "ingredients": "Durum wheat",
+        "certification": "IGP",
+        "format": "500g",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "shelf_life": "24 months",
+        "price": 5.99
+    }
+}, {
+    "pk": 4,
+    "model": "products.food",
+    "fields": {
+        "category": 2,
+        "type": "Pasta",
+        "name": "Penne Rigate",
+        "image": "penne_rigate.jpg",
+        "description": "Cylinder-shaped pasta, traditionally eaten with marinara or arrabbiata sauce.",
+        "ingredients": "Durum wheat",
+        "certification": "IGP",
+        "format": "500g",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "shelf_life": "24 months",
+        "price": 5.99
+    }
+}, {
+    "pk": 5,
+    "model": "products.food",
+    "fields": {
+        "category": 2,
+        "type": "Pasta",
+        "name": "Tortiglioni",
+        "image": "tortiglioni.jpg",
+        "description": "Short and large, with deep groves spiraling around it, tortiglioni are ideal to retain traditional sauces such as tomato sauce.",
+        "ingredients": "Durum wheat",
+        "certification": "IGP",
+        "format": "500g",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "shelf_life": "24 months",
+        "price": 5.99
+    }
+}, {
+    "pk": 6,
+    "model": "products.food",
+    "fields": {
+        "category": 2,
+        "type": "Pasta",
+        "name": "Spaghetti",
+        "image": "spaghetti.jpg",
+        "description": "Italy's most iconic type of pasta, it is ideal with any type of sauce. Our personal recommendation, though, it to try it with Sicily's beloved 'pasta with sardines'",
+        "ingredients": "Durum wheat",
+        "certification": "IGP",
+        "format": "500g",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "shelf_life": "24 months",
+        "price": 5.99
+    }
+}, {
+    "pk": 7,
+    "model": "products.food",
+    "fields": {
+        "category": 2,
+        "type": "Jam",
+        "name": "Orange marmalade",
+        "image": "marmellata_arance.jpg",
+        "description": "One of our best products, the orange marmalade is made with Sicily's famous red orange. Ideal for breakfast or as crostata flavouring.",
+        "ingredients": "Oranges, sugar.",
+        "certification": "IGP",
+        "format": "370g",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "shelf_life": "24 months",
+        "price": 6.5
+    }
+}, {
+    "pk": 8,
+    "model": "products.food",
+    "fields": {
+        "category": 2,
+        "type": "Jam",
+        "name": "Persimmon jam",
+        "image": "marmellata_cachi.jpg",
+        "description": "Sweet and intense, our persimmon jam is ideal as gelato pairing or in sweets recipes of all kinds.",
+        "ingredients": "Persimmon, sugar.",
+        "certification": "N/A",
+        "format": "370g",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "shelf_life": "24 months",
+        "price": 6.5
+    }
+}, {
+    "pk": 9,
+    "model": "products.food",
+    "fields": {
+        "category": 2,
+        "type": "Jam",
+        "name": "Lemon marmalade",
+        "image": "marmellata_limoni.jpg",
+        "description": "Sour and intense, it is a ideal for breakfast and for lemon-flavored cookies.",
+        "ingredients": "Lemons, sugar.",
+        "certification": "IGP",
+        "format": "370g",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "vegan_ok.png",
+        "shelf_life": "24 months",
+        "price": 6.5
+    }
+}, {
+    "pk": 10,
+    "model": "products.food",
+    "fields": {
+        "category": 2,
+        "type": "Honey",
+        "name": "Tangerine Honey",
+        "image": "miele_mandarino.jpg",
+        "description": "One of our shop's specials, it combines the quality of Sicilian tangerines with honey produced on the slopes of the Etna volcano. Ideal as a pairing for hard cheeses or if you have a cold.",
+        "ingredients": "Tangerines, honey.",
+        "certification": "N/A",
+        "format": "450g",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "",
+        "shelf_life": "24 months",
+        "price": 9
+    }
+}, {
+    "pk": 11,
+    "model": "products.food",
+    "fields": {
+        "category": 2,
+        "type": "Sauce",
+        "name": "Pesto",
+        "image": "pesto.jpg",
+        "description": "Originally a recipe from Liguria, in northern Italy, we believe our homemade pesto, produced with fresh basil from our land, offers unique freshness and taste.",
+        "ingredients": "Basil, olive oil, Parmigiano Reggiano, pine nuts.",
+        "certification": "N/A",
+        "format": "300g",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "",
+        "shelf_life": "24 months",
+        "price": 4.5
+    }
+}, {
+    "pk": 12,
+    "model": "products.food",
+    "fields": {
+        "category": 2,
+        "type": "Sauce",
+        "name": "Pistachio Pesto",
+        "image": "pesto_pistacchi.jpg",
+        "description": "Our traditional pesto, made with the famous Pistachio of Bronte. It doesn't get more Sicilian than this.",
+        "ingredients": "Basil, olive oil, Parmigiano Reggiano, pine nuts, Pistachio of Bronte.",
+        "certification": "IGP",
+        "format": "300g",
+        "place_of_origin": "Catania, Sicily",
+        "vegan_ok": "",
+        "shelf_life": "24 months",
+        "price": 5.8
+    }
+}, {
+    "pk": 1,
+    "model": "products.experiencetype",
+    "fields": {
+        "category": 3,
+        "type": "Half-day",
+        "exp_name": "Tasting",
+        "image": "tasting.jpg",
+        "description": "A half-day tasting of our wines and products, each paired with the appropriate food to let your appreciate the best Sicily has to offer. Depending on the weather, the tasting takes place in our vineyard or in our beautiful red-bricked cellar. The experience normally starts with the degustation of our pasta products, accompanied by our homemade pestos. Our wines naturally come to the rescue of the dry palate, accompanying also some fresh cheese from a local producer. To close on a sweet note, a selection of our jams is offered, paired with typical Sicilian biscuits.",
+        "duration": "3 hours",
+        "price": 40
+    }
+}, {
+    "pk": 2,
+    "model": "products.experiencetype",
+    "fields": {
+        "category": 3,
+        "type": "Full-day",
+        "exp_name": "Tasting & Visit",
+        "image": "tasting_visit.jpg",
+        "description": "The day starts with a visit of our premises, visiting in particular our vineyeard and laboratory. There, our staff will explain in detail what makes the products of 'A Taste Of Sicily' special. After the tour is completed, the guests continue with the tasting of our wines and products, each paired with the appropriate food to let your appreciate the best Sicily has to offer. Depending on the weather, the tasting takes place in our vineyard or in our beautiful red-bricked cellar. When both the visit and the tasting are completed, our guests are welcomed to relax in our courtyard, where comfortable loungers await the weary (and well-fed) visitor.",
+        "duration": "6-7 hours",
+        "price": 80
+    }
+}]
