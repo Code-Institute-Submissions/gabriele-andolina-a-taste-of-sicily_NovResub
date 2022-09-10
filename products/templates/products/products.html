@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+  <div class="container products-container">
+    <div class="row ">
+        <div class="column">
+            {% for product in products %}
+              {{ product }}
+            {% endfor %}
+        </div>
+    </div>
+  </div>
+{% endblock %}

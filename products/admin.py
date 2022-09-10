@@ -1,7 +1,6 @@
 from django.contrib import admin
 from .models import Category, Wine, Food, ExperienceType
 
-# Register your models here.
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
@@ -42,8 +41,8 @@ class ExperienceTypeAdmin(admin.ModelAdmin):
 
     ordering = ('name',)
 
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Wine, WineAdmin)
 admin.site.register(Food, FoodAdmin)
 admin.site.register(ExperienceType, ExperienceTypeAdmin)
-

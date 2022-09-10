@@ -88,3 +88,7 @@ li > a {
     color: #F51A12;
     border-color: #F51A12;
 }
+
+.products-container {
+    margin-top: 30vh;
+}
