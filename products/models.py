@@ -1,6 +1,10 @@
 from django.db import models
 
 class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=255)
     friendly_name = models.CharField(max_length=255, null=True, blank=True)
 
@@ -51,6 +55,10 @@ class Food(models.Model):
 
 
 class ExperienceType(models.Model):
+
+    class Meta:
+        verbose_name = 'Experience Type'
+
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     type = models.CharField(max_length=255, null=True, blank=True)
     name = models.CharField(max_length=255)
