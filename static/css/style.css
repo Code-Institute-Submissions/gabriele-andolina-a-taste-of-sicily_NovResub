@@ -113,6 +113,20 @@ li > a {
     font-weight: 600;
 }
 
+/******************** Product Details Section ********************/
+
+.product-detail-section {
+    margin-top: 50vh;
+}
+
+.wine-detail-img, .food-detail-img {
+    height: 70vh;
+}
+
+.vegan-ok {
+    height: 5%;
+}
+
 /******************** Media Queries ********************/
 
 /* For screens size of 320px and up */

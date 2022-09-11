@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="overlay"></div>
+        <div class="container-fluid">
+            <div class="row product-detail-section">
+                <div class="col-lg-4 image-container offset-1">
+                    <img src="{{ food.image.url }}" class="image-fluid food-detail-img" alt="Image for {{ food.name}}">
+                </div>
+                <div class="col-lg-6">
+                    <p><em>Name:</em> {{ food.name }}</p>
+                    <p><em>Type:</em> {{ food.type }}</p>
+                    <p><em>Certification:</em> {{ food.certification }}</p>
+                    <p><em>Ingredients:</em> {{ food.ingredients }}</p>
+                    <p><em>Description:</em> {{ food.description }}</p>
+                    <p><em>Format</em>:</em> {{ food.format }}</p>
+                    <p><em>Place of origin:</em> {{ food.place_of_origin }}</p>
+                    <p><em>Price:</em> € {{ food.price }}</p>
+                    <span><img src="{{ food.vegan_ok.url }}" class="vegan-ok" alt="Vegan Ok logo"></span>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
