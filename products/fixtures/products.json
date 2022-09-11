@@ -61,7 +61,7 @@
     "fields": {
         "category": 1,
         "name": "Primitivo di Manduria",
-        "image": "primitivo.jpg",
+        "image": "primitivo_2017.jpg",
         "description": "Originally a grape variety from Puglia, the production of Primitivo represents one of our highest achievements. Rich and tannic, with a complex scent of plum and cherries. Aged in oak casks for 24 months. Pairing: steak and aged cheeses.",
         "grape_variety": "Primitivo",
         "vintage": "2017",
@@ -80,7 +80,7 @@
     "fields": {
         "category": 1,
         "name": "Rosé Luigi Bosca",
-        "image": "rosé_2019.jpg",
+        "image": "rose_2019.jpg",
         "description": "Our unique rosé, the Luigi Bosca is named after a legendary figure of the island around the times of the Risorgimento. Fresh and fruity, it is the perfect companion for summer gatherings. Aged for 12 months in oak casks. Pairing: cold cuts and appetizers.",
         "grape_variety": "Nero d'Avola, Frappato, Perricone",
         "vintage": "2019",
@@ -98,9 +98,9 @@
     "model": "products.wine",
     "fields": {
         "category": 1,
-        "name": "Cabernet-Sauvignon",
+        "name": "Sauvignon",
         "image": "sauvignon2019.jpg",
-        "description": "We pride ourselves in offering this Sicilian variant of the much-renowned grape from the Bordeaux area in France. Hints of blueberries, black cherry and black currant, warm and full-bodied on the palate. Aged for 24 months in oak casks. Pairing: meat and cheese.",
+        "description": "We pride ourselves in offering this Sicilian variant of the much-renowned French grape. Fresh and flowery, with hints of exotic fruits, velvety and well-balanced on the palate. Aged for 12 months in oak casks. Pairing: fish and vegetarian dishes.",
         "grape_variety": "Cabernet Sauvignon",
         "vintage": "2019",
         "certification": "DOC",
@@ -221,7 +221,7 @@
         "category": 2,
         "type": "Jam",
         "name": "Orange marmalade",
-        "image": "marmellata_arance.jpg",
+        "image": "marmellata_arance.png",
         "description": "One of our best products, the orange marmalade is made with Sicily's famous red orange. Ideal for breakfast or as crostata flavouring.",
         "ingredients": "Oranges, sugar.",
         "certification": "IGP",
@@ -322,7 +322,7 @@
     "fields": {
         "category": 3,
         "type": "Half-day",
-        "exp_name": "Tasting",
+        "name": "Tasting",
         "image": "tasting.jpg",
         "description": "A half-day tasting of our wines and products, each paired with the appropriate food to let your appreciate the best Sicily has to offer. Depending on the weather, the tasting takes place in our vineyard or in our beautiful red-bricked cellar. The experience normally starts with the degustation of our pasta products, accompanied by our homemade pestos. Our wines naturally come to the rescue of the dry palate, accompanying also some fresh cheese from a local producer. To close on a sweet note, a selection of our jams is offered, paired with typical Sicilian biscuits.",
         "duration": "3 hours",
@@ -334,7 +334,7 @@
     "fields": {
         "category": 3,
         "type": "Full-day",
-        "exp_name": "Tasting & Visit",
+        "name": "Tasting & Visit",
         "image": "tasting_visit.jpg",
         "description": "The day starts with a visit of our premises, visiting in particular our vineyeard and laboratory. There, our staff will explain in detail what makes the products of 'A Taste Of Sicily' special. After the tour is completed, the guests continue with the tasting of our wines and products, each paired with the appropriate food to let your appreciate the best Sicily has to offer. Depending on the weather, the tasting takes place in our vineyard or in our beautiful red-bricked cellar. When both the visit and the tasting are completed, our guests are welcomed to relax in our courtyard, where comfortable loungers await the weary (and well-fed) visitor.",
         "duration": "6-7 hours",

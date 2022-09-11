@@ -4,13 +4,36 @@
 
 
 {% block content %}
-  <div class="container products-container">
-    <div class="row ">
-        <div class="column">
-            {% for product in products %}
-              {{ product }}
-            {% endfor %}
+<div class="overlay"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-10 offset-1 products-title text-center">
+        <h2>Products</h2>
+      </div>
+      <hr class="w-50 mx-auto mt-2">
+    </div>
+    <div class="row">
+      {% for product in products %}
+        <div class="col-sm-6 col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 text-center mx-auto">
+            {% if product.image %}
+            <a href="">
+              <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+            </a>
+            {% else%}
+            <a href="">
+              <img class="card-img-top img-fluid" src="{{ product.image }}" alt="{{ product.name }}"> 
+            </a>
+            {% endif %}
+            <div class="card-body my-auto">
+              <p>{{ product.name }}</p>
+            </div>
+            <div>
+              <p>€ {{ product.price }}</p>
+            </div>
+          </div>
         </div>
+      {% endfor %}
     </div>
   </div>
 {% endblock %}
