@@ -18,6 +18,7 @@ class Category(models.Model):
 
 class Wine(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    product_type = models.CharField(max_length=255, default="Wine")
     name = models.CharField(max_length=255)
     image = models.ImageField(null=True, blank=True)
     description = models.TextField()
@@ -38,6 +39,7 @@ class Wine(models.Model):
 
 class Food(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    product_type = models.CharField(max_length=255, default="Food")
     type = models.CharField(max_length=255, null=True, blank=True)
     name = models.CharField(max_length=255)
     image = models.ImageField(null=True, blank=True)

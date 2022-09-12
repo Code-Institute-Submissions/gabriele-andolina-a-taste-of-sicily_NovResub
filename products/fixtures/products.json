@@ -3,6 +3,7 @@
     "model": "products.wine",
     "fields": {
         "category": 1,
+        "product_type": "Wine",
         "name": "Spumante - Millesimato",
         "image": "millesimato_2018.jpg",
         "description": "A Brut sparkling wine, dry with a hint of sweetness, typical of the Etna region. Aged in stainless steel tanks for 12 months. Pairing: cheese, seafood or desserts.",
@@ -22,6 +23,7 @@
     "model": "products.wine",
     "fields": {
         "category": 1,
+        "product_type": "Wine",
         "name": "Carlo Rossi",
         "image": "carlo_rossi_2020.jpg",
         "description": "A classic Merlot, with hints of black cherry, raspberry, and plum. Aged for 12 months in oak casks. Pairing: meat, cheese, and cold cuts.",
@@ -41,6 +43,7 @@
     "model": "products.wine",
     "fields": {
         "category": 1,
+        "product_type": "Wine",
         "name": "Corvo Rosso",
         "image": "corvo_rosso_2010.jpg",
         "description": "The first wine to be bottled in Sicily in 1824, Corvo Rosso has since become one of the island's most renowned wines. Intense aroma and dry taste. Pairing: grilled and roasted meat.",
@@ -60,6 +63,7 @@
     "model": "products.wine",
     "fields": {
         "category": 1,
+        "product_type": "Wine",
         "name": "Primitivo di Manduria",
         "image": "primitivo_2017.jpg",
         "description": "Originally a grape variety from Puglia, the production of Primitivo represents one of our highest achievements. Rich and tannic, with a complex scent of plum and cherries. Aged in oak casks for 24 months. Pairing: steak and aged cheeses.",
@@ -79,6 +83,7 @@
     "model": "products.wine",
     "fields": {
         "category": 1,
+        "product_type": "Wine",
         "name": "Rosé Luigi Bosca",
         "image": "rose_2019.jpg",
         "description": "Our unique rosé, the Luigi Bosca is named after a legendary figure of the island around the times of the Risorgimento. Fresh and fruity, it is the perfect companion for summer gatherings. Aged for 12 months in oak casks. Pairing: cold cuts and appetizers.",
@@ -98,6 +103,7 @@
     "model": "products.wine",
     "fields": {
         "category": 1,
+        "product_type": "Wine",
         "name": "Sauvignon",
         "image": "sauvignon2019.jpg",
         "description": "We pride ourselves in offering this Sicilian variant of the much-renowned French grape. Fresh and flowery, with hints of exotic fruits, velvety and well-balanced on the palate. Aged for 12 months in oak casks. Pairing: fish and vegetarian dishes.",
@@ -117,6 +123,7 @@
     "model": "products.food",
     "fields": {
         "category": 2,
+        "product_type": "Food",
         "type": "Pasta",
         "name": "Conchiglie",
         "image": "conchiglie.jpg",
@@ -134,6 +141,7 @@
     "model": "products.food",
     "fields": {
         "category": 2,
+        "product_type": "Food",
         "type": "Pasta",
         "name": "Fettuccine",
         "image": "fettuccine.jpg",
@@ -151,6 +159,7 @@
     "model": "products.food",
     "fields": {
         "category": 2,
+        "product_type": "Food",
         "type": "Pasta",
         "name": "Fusilli",
         "image": "fusilli.jpg",
@@ -168,6 +177,7 @@
     "model": "products.food",
     "fields": {
         "category": 2,
+        "product_type": "Food",
         "type": "Pasta",
         "name": "Penne Rigate",
         "image": "penne_rigate.jpg",
@@ -185,6 +195,7 @@
     "model": "products.food",
     "fields": {
         "category": 2,
+        "product_type": "Food",
         "type": "Pasta",
         "name": "Tortiglioni",
         "image": "tortiglioni.jpg",
@@ -202,6 +213,7 @@
     "model": "products.food",
     "fields": {
         "category": 2,
+        "product_type": "Food",
         "type": "Pasta",
         "name": "Spaghetti",
         "image": "spaghetti.jpg",
@@ -219,6 +231,7 @@
     "model": "products.food",
     "fields": {
         "category": 2,
+        "product_type": "Food",
         "type": "Jam",
         "name": "Orange marmalade",
         "image": "marmellata_arance.png",
@@ -236,6 +249,7 @@
     "model": "products.food",
     "fields": {
         "category": 2,
+        "product_type": "Food",
         "type": "Jam",
         "name": "Persimmon jam",
         "image": "marmellata_cachi.jpg",
@@ -253,6 +267,7 @@
     "model": "products.food",
     "fields": {
         "category": 2,
+        "product_type": "Food",
         "type": "Jam",
         "name": "Lemon marmalade",
         "image": "marmellata_limoni.jpg",
@@ -270,6 +285,7 @@
     "model": "products.food",
     "fields": {
         "category": 2,
+        "product_type": "Food",
         "type": "Honey",
         "name": "Tangerine Honey",
         "image": "miele_mandarino.jpg",
@@ -287,6 +303,7 @@
     "model": "products.food",
     "fields": {
         "category": 2,
+        "product_type": "Food",
         "type": "Sauce",
         "name": "Pesto",
         "image": "pesto.jpg",
@@ -304,6 +321,7 @@
     "model": "products.food",
     "fields": {
         "category": 2,
+        "product_type": "Food",
         "type": "Sauce",
         "name": "Pistachio Pesto",
         "image": "pesto_pistacchi.jpg",
