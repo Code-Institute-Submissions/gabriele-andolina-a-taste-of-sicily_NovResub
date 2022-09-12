@@ -39,7 +39,27 @@
             </div>
           </div>
           {% endfor %}
-          
+          {% for food in foods %}
+          <div class="col-sm-6 col-md-6 col-lg-4 mb-4">  
+            <div class="card h-100 text-center mx-auto">
+              {% if food.image %}
+              <a href="{% url 'food_details' food.id %}">
+                <img class="card-img-top img-fluid" src="{{ food.image.url }}" alt="{{ food.name }}">
+              </a>
+              {% else%}
+              <a href="{% url 'food_details' food.id %}">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ food.name }}"> 
+              </a>
+              {% endif %}
+              <div class="card-body my-auto">
+                <p>{{ food.name }}</p>
+              </div>
+              <div>
+                <p>€ {{ food.price }}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
         </div>
     </div>
   </div>

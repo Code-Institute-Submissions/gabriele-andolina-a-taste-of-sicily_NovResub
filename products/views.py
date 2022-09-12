@@ -33,4 +33,16 @@ def view_wine_details(request, wine_id):
     return render(request, 'products/wine_details.html', context)
 
 
+def view_food_details(request, food_id):
+    """
+    A view to display full details for each food product.
+    """
+
+    food = get_object_or_404(Food, pk=food_id)
+
+    context = {
+        'food': food
+    }
+
+    return render(request, 'products/food_details.html', context)
 

@@ -119,8 +119,12 @@ li > a {
     margin-top: 50vh;
 }
 
-.wine-detail-img, .food-detail-img {
+.wine-detail-img {
     height: 70vh;
+}
+
+.food-detail-img {
+    height: 50vh;
 }
 
 .vegan-ok {
