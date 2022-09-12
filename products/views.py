@@ -1,4 +1,3 @@
-from itertools import chain
 from django.shortcuts import render, get_object_or_404
 from .models import Wine, Food
 
@@ -11,10 +10,10 @@ def view_products(request):
 
     wines = Wine.objects.all()
     foods = Food.objects.all()
-    all_products = list(chain(wines, foods))
 
     context = {
-        'products': all_products
+        'wines': wines,
+        'foods': foods
     }
 
     return render(request, 'products/products.html', context)
@@ -32,4 +31,6 @@ def view_wine_details(request, wine_id):
     }
 
     return render(request, 'products/wine_details.html', context)
+
+
 

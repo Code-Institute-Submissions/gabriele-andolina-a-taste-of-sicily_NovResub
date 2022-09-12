@@ -316,28 +316,4 @@
         "shelf_life": "24 months",
         "price": 5.8
     }
-}, {
-    "pk": 1,
-    "model": "products.experiencetype",
-    "fields": {
-        "category": 3,
-        "type": "Half-day",
-        "name": "Tasting",
-        "image": "tasting.jpg",
-        "description": "A half-day tasting of our wines and products, each paired with the appropriate food to let your appreciate the best Sicily has to offer. Depending on the weather, the tasting takes place in our vineyard or in our beautiful red-bricked cellar. The experience normally starts with the degustation of our pasta products, accompanied by our homemade pestos. Our wines naturally come to the rescue of the dry palate, accompanying also some fresh cheese from a local producer. To close on a sweet note, a selection of our jams is offered, paired with typical Sicilian biscuits.",
-        "duration": "3 hours",
-        "price": 40
-    }
-}, {
-    "pk": 2,
-    "model": "products.experiencetype",
-    "fields": {
-        "category": 3,
-        "type": "Full-day",
-        "name": "Tasting & Visit",
-        "image": "tasting_visit.jpg",
-        "description": "The day starts with a visit of our premises, visiting in particular our vineyeard and laboratory. There, our staff will explain in detail what makes the products of 'A Taste Of Sicily' special. After the tour is completed, the guests continue with the tasting of our wines and products, each paired with the appropriate food to let your appreciate the best Sicily has to offer. Depending on the weather, the tasting takes place in our vineyard or in our beautiful red-bricked cellar. When both the visit and the tasting are completed, our guests are welcomed to relax in our courtyard, where comfortable loungers await the weary (and well-fed) visitor.",
-        "duration": "6-7 hours",
-        "price": 80
-    }
 }]
