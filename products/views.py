@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Wine, Food
+from .models import Wine, Food, Category
 
 
 def view_products(request):
@@ -13,8 +13,15 @@ def view_products(request):
     wines = Wine.objects.all()
     foods = Food.objects.all()
     query = None
+    categories = None
 
     if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            wines = wines.filter(category__name__in=categories)
+            foods = foods.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -29,6 +36,7 @@ def view_products(request):
         'wines': wines,
         'foods': foods,
         'search_term': query,
+        'current_categories': categories,
     }
 
     return render(request, 'products/products.html', context)

@@ -44,9 +44,9 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">Shop <i class="fa-solid fa-shop"></i></a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="{% url 'all_products' %}">All Products <i class="fa-solid fa-basket-shopping"></i></a>
-                <a class="dropdown-item" href="#">Wine <i class="fa-solid fa-wine-glass"></i></a>
-                <a class="dropdown-item" href="#">Food <i class="fa-solid fa-utensils"></i></a>
+                <a class="dropdown-item" href="{% url 'all_products' %}?category=wine,food">All Products <i class="fa-solid fa-basket-shopping"></i></a>
+                <a class="dropdown-item" href="{% url 'all_products' %}?category=wine">Wine <i class="fa-solid fa-wine-glass"></i></a>
+                <a class="dropdown-item" href="{% url 'all_products' %}?category=food">Food <i class="fa-solid fa-utensils"></i></a>
               </div>
             </li>
             <li class="nav-item">
