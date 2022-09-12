@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header%}
+    <div class="container header-container">
+      <div class="row">
+        <div class="col"></div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-10 offset-3 cart-title">
+        <h2 class="text-uppercase">Shopping Cart</h2>
+      </div>
+      <hr class="w-50 mx-auto mt-2">
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-3 cart-title">
+        {% if cart_items %}
+          <div class="table-responsive rounded"></div>
+        {% else %}
+          <p class="lead">Your cart is empty.</p>
+          <a href="{% url 'all_products' %}" class="btn keep-shopping-btn mt-3">
+            <span class="icon">
+              <i></i>
+            </span>
+            <span class="text-uppercase">Keep Shopping</span>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+</div>
+{% endblock %}
