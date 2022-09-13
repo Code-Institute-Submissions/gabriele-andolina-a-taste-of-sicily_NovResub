@@ -28,6 +28,28 @@
                     {% if food.vegan_ok %}
                     <span><img src="{{ food.vegan_ok.url }}" class="vegan-ok" alt="Vegan Ok logo"></span>
                     {% endif %}
+
+                    <form class="form" action="{% url 'add_food' food.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row w-50 offset-1">
+                            <div class="col-12 mt-4">
+                                <p class="text-center"><strong>Quantity:</strong></p>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-food_id="{{ food.id }}" id="id_food_qty_{{ food.id }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <a href="{% url 'all_products' %}" class="btn keep-shopping-btn">
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <input type="submit" class="btn text-uppercase add-to-cart" value="Add to Cart">
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </form>
                 </div>
             </div>
         </div>
