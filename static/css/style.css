@@ -135,9 +135,24 @@ li > a {
 }
 
 .vegan-ok {
-    height: 5%;
+    height: 3%;
 }
 
+.form-group {
+    border: 1px solid #2C3333;
+}
+
+.add-to-cart {
+    background-color: #2C3333;
+    color: #F51A12;
+    border: 1px solid #F51A12;
+}
+
+.add-to-cart:hover {
+    background-color: #2C3333;
+    color: #FFBB26;
+    border-color: #FFBB26;
+}
 /******************** Product Details Section ********************/
 
 .keep-shopping-btn {
