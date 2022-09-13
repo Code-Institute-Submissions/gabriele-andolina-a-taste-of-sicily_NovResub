@@ -63,6 +63,15 @@ li > a {
     margin-top: 250px;
 }
 
+/******************** Delivery Info Carousel ********************/
+
+#delivery-carousel {
+    background-color: #2C3333;
+    color: #FFBB26;
+    border-top: 1px solid #FFBB26;
+    width: 100vw;
+}
+
 /******************** Homepage ********************/
 
 .jumbotron {

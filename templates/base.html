@@ -17,7 +17,7 @@
 
   <body>
 
-    <header class="container-fluid fixed-top bg-white">
+    <header class="fixed-top bg-white">
       <!-- Shop Name -->
       <div class="site-title pb-2">
         <a href="{% url 'home' %}">
@@ -26,6 +26,21 @@
           </h1>
         </a>
       </div>
+      <!-- Delivery Info Carousel -->
+      <div class="container-fluid">
+        <div class="row">
+          <div id="delivery-carousel" class="carousel slide" data-ride="carousel" data-interval="5500">
+            <div class="carousel-inner text-center pt-2">
+              <div class="carousel-item active">
+                <h4 class="d-block w-100 text-uppercase" alt="Italy delivery info">Free delivery <span class="title-b">in Italy</span></h4>
+              </div>
+              <div class="carousel-item">
+                <h3 class="d-block w-100 text-uppercase" alt="Europe delivery info">Free delivery <span class="title-b">in Europe</span> for orders over €{{ free_delivery_threshold}}</h3>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
 
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light my-2">
