@@ -93,7 +93,17 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'view_cart' %}">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+              <a class="nav-link" href="{% url 'view_cart' %}">
+                <div">
+                  <div>Cart<i class="fa-solid fa-cart-shopping"></i>
+                      {% if grand_total %}
+                          €{{ grand_total|floatformat:2}}
+                      {% else %}
+                          €0.00
+                      {% endif %}
+                  </div>
+                </div>
+              </a>
             </li>
           </ul>
         </div>

@@ -20,7 +20,6 @@ def add_wine(request, wine_id):
         cart[wine_id] = quantity
 
     request.session['cart'] = cart
-    print(request.session['cart'])
     return redirect(redirect_url)
 
 
@@ -37,5 +36,4 @@ def add_food(request, food_id):
         cart[food_id] = quantity
 
     request.session['cart'] = cart
-    print(request.session['cart'])
     return redirect(redirect_url)

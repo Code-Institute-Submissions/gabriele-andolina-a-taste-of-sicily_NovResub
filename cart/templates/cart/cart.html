@@ -22,7 +22,9 @@
     <div class="row">
       <div class="col-10 offset-3 cart-title">
         {% if cart_items %}
-          <div class="table-responsive rounded"></div>
+          <div class="table-responsive rounded">
+            {{ cart_items }}
+          </div>
         {% else %}
           <p class="lead">Your cart is empty.</p>
           <a href="{% url 'all_products' %}" class="btn keep-shopping-btn mt-3">
