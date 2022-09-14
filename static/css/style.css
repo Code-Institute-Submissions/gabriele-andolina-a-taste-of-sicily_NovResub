@@ -159,9 +159,19 @@ li > a {
     background-color: #2C3333;
 }
 
+/******************** Cart ********************/
+
+.cart-img-wine {
+    height: 20vh;
+}
+
+.cart-img-food {
+    height: 10vh;
+}
+
 /******************** Media Queries ********************/
 
-/* For screens size of 480px and down */
+/* For screens size of 480px and down
 
 @media screen and (max-width: 440px) {
     
@@ -210,4 +220,4 @@ li > a {
     .jumbotron {
         top: 40vh;
     }
-}
+} */
