@@ -41,4 +41,46 @@
         let wineItemId = $(this).data('wine_id');
         handleEnableDisableWine(wineItemId);
     });
+
+    // Disable +/- buttons outside 1-99 range for food items
+    function handleEnableDisableFood(foodItemId) {
+        let currentValue = parseInt($(`#id_food_qty_${foodItemId}`).val());
+        let minusDisabled = currentValue < 2;
+        let plusDisabled = currentValue > 98;
+        $(`#decrement-food-qty_${foodItemId}`).prop('disabled', minusDisabled);
+        $(`#increment-food-qty_${foodItemId}`).prop('disabled', plusDisabled);
+    }
+
+    // Ensure enabling/disabling of all inputs for food items on page load 
+    let allFoodQtyInputs = $('.qty_input');
+    for(let i = 0; i < allFoodQtyInputs.length; i++){
+        let foodItemId = $(allFoodQtyInputs[i]).data('food_id');
+        handleEnableDisableFood(foodItemId);
+    }
+
+    // Check enable/disable every time the input for food items is changed
+    $('.qty-input').change(function() {
+        let foodItemId = $(this).data('food_id');
+        handleEnableDisableFood(foodItemId);
+    });
+
+    // Increment food items quantity
+    $('.increment-food-qty').click(function(e) {
+        e.preventDefault();
+        let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        let currentValue = parseInt($(closestInput).val());
+        $(closestInput).val(currentValue + 1);
+        let foodItemId = $(this).data('food_id');
+        handleEnableDisableFood(foodItemId);
+    });
+
+    // Decrement food items quantity
+    $('.decrement-food-qty').click(function(e) {
+        e.preventDefault();
+        let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        let currentValue = parseInt($(closestInput).val());
+        $(closestInput).val(currentValue - 1);
+        let foodItemId = $(this).data('food_id');
+        handleEnableDisableFood(foodItemId);
+    });
 </script>
