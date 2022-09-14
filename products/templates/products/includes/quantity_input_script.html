@@ -1,0 +1,44 @@
+<script type="text/javascript">
+    
+    // Disable +/- buttons outside 1-99 range for wine items
+    function handleEnableDisableWine(wineItemId) {
+        let currentValue = parseInt($(`#id_wine_qty_${wineItemId}`).val());
+        let minusDisabled = currentValue < 2;
+        let plusDisabled = currentValue > 98;
+        $(`#decrement-wine-qty_${wineItemId}`).prop('disabled', minusDisabled);
+        $(`#increment-wine-qty_${wineItemId}`).prop('disabled', plusDisabled);
+    }
+
+    // Ensure enabling/disabling of all inputs for wine items on page load 
+    let allWineQtyInputs = $('.qty_input');
+    for(let i = 0; i < allWineQtyInputs.length; i++){
+        let wineItemId = $(allWineQtyInputs[i]).data('wine_id');
+        handleEnableDisableWine(wineItemId);
+    }
+
+    // Check enable/disable every time the input for wine items is changed
+    $('.qty-input').change(function() {
+        let wineItemId = $(this).data('wine_id');
+        handleEnableDisableWine(wineItemId);
+    });
+
+    // Increment wine items quantity
+    $('.increment-wine-qty').click(function(e) {
+        e.preventDefault();
+        let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        let currentValue = parseInt($(closestInput).val());
+        $(closestInput).val(currentValue + 1);
+        let wineItemId = $(this).data('wine_id');
+        handleEnableDisableWine(wineItemId);
+    });
+
+    // Decrement wine items quantity
+    $('.decrement-wine-qty').click(function(e) {
+        e.preventDefault();
+        let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        let currentValue = parseInt($(closestInput).val());
+        $(closestInput).val(currentValue - 1);
+        let wineItemId = $(this).data('wine_id');
+        handleEnableDisableWine(wineItemId);
+    });
+</script>

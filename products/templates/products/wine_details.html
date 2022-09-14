@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block page_header%}
+{% block page_header %}
     <div class="container header-container">
       <div class="row">
         <div class="col"></div>
@@ -39,7 +39,28 @@
                                 <p class="text-center"><strong>Quantity:</strong></p>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-wine_id="{{ wine.id }}" id="id_wine_qty_{{ wine.id }}">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-wine-qty btn btn-black"
+                                                    data-wine_id="{{ wine.id }}" 
+                                                    id="decrement-wine-qty_{{ wine.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-minus"></i>
+                                                    </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control qty_input" type="number" 
+                                               name="quantity" value="1" min="1" max="99" 
+                                               data-wine_id="{{ wine.id }}" 
+                                               id="id_wine_qty_{{ wine.id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-wine-qty btn btn-black"
+                                                    data-wine_id="{{ wine.id }}" 
+                                                    id="increment-wine-qty_{{ wine.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-plus"></i>
+                                                    </span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -57,4 +78,9 @@
             </div>
         </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
