@@ -18,6 +18,8 @@ class WineAdmin(admin.ModelAdmin):
 
     ordering = ('name',)
 
+    prepopulated_fields = {"slug": ("name",)}
+
 
 class FoodAdmin(admin.ModelAdmin):
     list_display = (
@@ -28,6 +30,8 @@ class FoodAdmin(admin.ModelAdmin):
     )
 
     ordering = ('name',)
+
+    prepopulated_fields = {"slug": ("name",)}
 
 
 class ExperienceTypeAdmin(admin.ModelAdmin):

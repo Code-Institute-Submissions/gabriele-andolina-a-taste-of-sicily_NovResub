@@ -169,6 +169,19 @@ li > a {
     height: 10vh;
 }
 
+.plus-minus-btn {
+    background-color: #2C3333;
+    color: #FFBB26;
+}
+
+.form-group {
+    width: 20vw;
+}
+
+.update-link, .remove-wine-item, .remove-food-item {
+    cursor: pointer;
+}
+
 /******************** Media Queries ********************/
 
 /* For screens size of 480px and down
@@ -220,4 +233,4 @@ li > a {
     .jumbotron {
         top: 40vh;
     }
-} */
+}

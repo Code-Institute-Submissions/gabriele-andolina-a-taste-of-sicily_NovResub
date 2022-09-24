@@ -9,7 +9,7 @@ def cart_contents(request):
     # payments, this will need to be updated: customers from Italy (will have to use their address as the key discriminant)
     # will get free delivery no matter what the grand_total is, whereas the following logic will apply to
     # customers from Europe.
-    
+
     cart_items = []
     total = 0
     product_count = 0
