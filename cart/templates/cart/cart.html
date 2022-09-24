@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header%}
     <div class="container header-container">
@@ -46,7 +47,7 @@
                       <p>€{{ item.wine.price }}</p>
                     </td>
                     <td>
-                      <form class="form" action="{% url 'add_wine' item.wine.id %}" method="POST">
+                      <form class="form update-form" action="{% url 'adjust_wine_qty' item.wine.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row w-50 offset-1">
                             <div class="col-12">
@@ -84,7 +85,7 @@
                     <a class="remove-wine-item text-danger ml-5" id="remove_{{ item.wine_id }}"><small>Remove</small></a>
                     </td>
                     <td>
-                      <p>€{{ item.wine.price }}</p>
+                      <p>€{{ item.wine.price | calc_subtotal:item.quantity }}</p>
                     </td>
                   </tr>
                   {% elif item.food_id %}
@@ -99,7 +100,7 @@
                       <p>€{{ item.food.price }}</p>
                     </td>
                     <td>
-                      <form class="form" action="{% url 'add_food' item.food.id %}" method="POST">
+                      <form class="form update-form" action="{% url 'adjust_food_qty' item.food.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row w-50 offset-1">
                             <div class="col-12">
@@ -135,7 +136,7 @@
                     <a class="remove-food-item text-danger ml-5" id="remove_{{ item.food_id }}"><small>Remove</small></a>
                     </td>
                     <td>
-                      <p>€{{ item.food.price }}</p>
+                      <p>€{{ item.food.price | calc_subtotal:item.quantity }}</p>
                     </td>
                   </tr>
                   {% endif %}
@@ -189,7 +190,7 @@
   $('.remove-wine-item').click(function(e) {
     let csrfToken = "{{ csrf_token }}";
     let wineItemId = $(this).attr('id').split('remove_')[1];
-    let url = `/cart/remove/${wineItemId}`;
+    let url = `/cart/remove/${wineItemId}/`;
     let data = {'csrfmiddlewaretoken': csrfToken}
 
     $.post(url, data)
@@ -202,7 +203,7 @@
   $('.remove-food-item').click(function(e) {
     let csrfToken = "{{ csrf_token }}";
     let foodItemId = $(this).attr('id').split('remove_')[1];
-    let url = `/cart/remove/${foodItemId}`;
+    let url = `/cart/remove/${foodItemId}/`;
     let data = {'csrfmiddlewaretoken': csrfToken}
 
     $.post(url, data)
