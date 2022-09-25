@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
-
+from django.contrib import messages
+from products.models import Wine, Food
 
 def view_cart(request):
     """ A view to display the shopping cart. """
@@ -10,6 +11,7 @@ def view_cart(request):
 def add_wine(request, wine_id):
     """ A view to add a quantity of the selected wine to the shopping cart. """
 
+    wine = Wine.objects.get(pk=wine_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
@@ -18,6 +20,7 @@ def add_wine(request, wine_id):
         cart[wine_id] += quantity
     else:
         cart[wine_id] = quantity
+        messages.success(request, f'Added {wine.name} to the cart. Cheers!')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
