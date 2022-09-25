@@ -182,6 +182,23 @@ li > a {
     cursor: pointer;
 }
 
+/******************** Toasts ********************/
+
+.message-container {
+    position: fixed;
+    top: 230px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /******************** Media Queries ********************/
 
 /* For screens size of 480px and down
