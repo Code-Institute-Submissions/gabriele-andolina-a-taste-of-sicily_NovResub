@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms',
     'home',
     'products',
     'cart',
@@ -74,6 +75,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'a_taste_of_sicily.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -90,6 +93,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'cart.contexts.cart_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
