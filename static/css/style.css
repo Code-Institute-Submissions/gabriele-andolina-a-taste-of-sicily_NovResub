@@ -155,7 +155,7 @@ li > a {
 }
 /******************** Product Details Section ********************/
 
-.keep-shopping-btn {
+.keep-shopping-btn, .checkout-btn {
     background-color: #2C3333;
 }
 
@@ -199,6 +199,21 @@ li > a {
     height: 2px;
 }
 
+.cart-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.checkout-btn {
+    background-color: #2C3333;
+    color: #FFBB26;
+}
+
+.checkout-btn:hover {
+    background-color: #2C3333;
+    color: #F51A12;
+}
 /******************** Media Queries ********************/
 
 /* For screens size of 480px and down
