@@ -111,10 +111,6 @@ li > a {
     z-index: -1;
 }
 
-/* .products-title, .cart-title {
-    margin-top: 60px;
-} */
-
 .card {
     width: 60%;
     background-color: #FFBB26;
@@ -125,10 +121,6 @@ li > a {
 }
 
 /******************** Product Details Section ********************/
-
-.wine-detail-img {
-    height: 70vh;
-}
 
 .food-detail-img {
     height: 50vh;
@@ -161,10 +153,6 @@ li > a {
 
 /******************** Cart ********************/
 
-.cart-img-wine {
-    height: 20vh;
-}
-
 .cart-img-food {
     height: 10vh;
 }
@@ -178,7 +166,7 @@ li > a {
     width: 20vw;
 }
 
-.update-link, .remove-wine-item, .remove-food-item {
+.update-link, .remove-food-item {
     cursor: pointer;
 }
 
@@ -214,6 +202,25 @@ li > a {
     background-color: #2C3333;
     color: #F51A12;
 }
+
+/******************** Checkout ********************/
+
+.adjust-cart {
+    border: 2px solid black;
+    background-color: #F51A12;
+    transition: all .5s ease-in-out;
+}
+
+.submit-button {
+    border: 2px solid black;
+    background-color: #FFBB26;
+    transition: all .3s ease-in-out;
+}
+
+.adjust-cart:hover, .submit-button:hover {
+    transform: scale(1.1) perspective(1px)
+}
+
 /******************** Media Queries ********************/
 
 /* For screens size of 480px and down

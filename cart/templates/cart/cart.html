@@ -79,7 +79,7 @@
                         </div>
                     </form>
                     <a class="update-link text-info ml-5"><small>Update</small></a>
-                    <a class="remove-food-item text-danger ml-5" id="remove_{{ item.food_id }}"><small>Remove</small></a>
+                    <a class="remove-item text-danger ml-5" id="remove_{{ item.food_id }}"><small>Remove</small></a>
                     </td>
                     <td>
                       <p>€{{ item.food.price | calc_subtotal:item.quantity }}</p>
@@ -104,14 +104,14 @@
           <p class="lead">Your cart is empty.</p>
           <a href="{% url 'all_products' %}" class="btn keep-shopping-btn mt-3">
             <span class="icon">
-              <i></i>
+              <i class="fa-solid fa-chevron-left"></i>
             </span>
             <span class="text-uppercase">Keep Shopping</span>
           </a>
         {% endif %}
-        <a href="{% url 'all_products' %}" class="btn keep-shopping-btn mt-3">
+        <a href="{% url 'checkout' %}" class="btn keep-shopping-btn mt-3">
           <span class="icon">
-            <i></i>
+            <i class="fa-solid fa-lock"></i>
           </span>
           <span class="text-uppercase">Checkout</span>
         </a>
@@ -131,28 +131,15 @@
     form.submit();
   })
 
-  // Remove wine item and reload on click
-  $('.remove-wine-item').click(function(e) {
-    let csrfToken = "{{ csrf_token }}";
-    let wineItemId = $(this).attr('id').split('remove_')[1];
-    let url = `/cart/remove/${wineItemId}/`;
-    let data = {'csrfmiddlewaretoken': csrfToken}
-
-    $.post(url, data)
-    .done(function() {
-      location.reload();
-    });
-  })
-
   // Remove food item and reload on click
-  $('.remove-food-item').click(function(e) {
+  $('.remove-item').click(function(e) {
     let csrfToken = "{{ csrf_token }}";
     let foodItemId = $(this).attr('id').split('remove_')[1];
     let url = `/cart/remove/${foodItemId}/`;
     let data = {'csrfmiddlewaretoken': csrfToken}
 
     $.post(url, data)
-    .done(function() {
+     .done(function() {
       location.reload();
     });
   })
