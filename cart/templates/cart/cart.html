@@ -34,61 +34,7 @@
                 </tr>
               </thead>
 
-              {% for item in cart_items %}
-                  {% if item.wine_id %}
-                  <tr>
-                    <td>
-                      <img class="image-fluid cart-img-wine" src="{{ item.wine.image.url }}" alt="">
-                    </td>
-                    <td>
-                      <p>{{ item.wine.name }}</p>
-                    </td>
-                    <td>
-                      <p>€{{ item.wine.price }}</p>
-                    </td>
-                    <td>
-                      <form class="form update-form" action="{% url 'adjust_wine_qty' item.wine.id %}" method="POST">
-                        {% csrf_token %}
-                        <div class="form-row w-50 offset-1">
-                            <div class="col-12">
-                                <p class="text-center"><strong></strong></p>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-wine-qty btn btn-sm plus-minus-btn rounded-0"
-                                                    data-wine_id="{{ item.wine_id }}" 
-                                                    id="decrement-wine-qty_{{ item.wine_id }}">
-                                                    <span class="icon">
-                                                        <i class="fas fa-minus"></i>
-                                                    </span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control qty_input" type="number" 
-                                               name="quantity" value="{{ item.quantity }}" min="1" max="99" 
-                                               data-wine_id="{{ item.wine_id }}" 
-                                               id="id_wine_qty_{{ item.wine_id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-wine-qty btn btn-sm plus-minus-btn rounded-0"
-                                                    data-wine_id="{{ item.wine_id }}" 
-                                                    id="increment-wine-qty_{{ item.wine_id }}">
-                                                    <span class="icon">
-                                                        <i class="fas fa-plus"></i>
-                                                    </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <a class="update-link text-info ml-5"><small>Update</small></a>
-                    <a class="remove-wine-item text-danger ml-5" id="remove_{{ item.wine_id }}"><small>Remove</small></a>
-                    </td>
-                    <td>
-                      <p>€{{ item.wine.price | calc_subtotal:item.quantity }}</p>
-                    </td>
-                  </tr>
-                  {% elif item.food_id %}
+              {% for item in cart_items %}                  
                   <tr>
                     <td>
                       <img class="img-fluid cart-img-food" src="{{ item.food.image.url }}" alt="">
@@ -139,7 +85,6 @@
                       <p>€{{ item.food.price | calc_subtotal:item.quantity }}</p>
                     </td>
                   </tr>
-                  {% endif %}
               {% endfor %}
               <tr>
                 <td colspan="5" class="pt-5 text-right">
