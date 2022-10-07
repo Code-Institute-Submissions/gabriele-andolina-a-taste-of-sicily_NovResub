@@ -2,7 +2,7 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
-from products.models import Wine, Food
+from products.models import Food
 
 
 class Order(models.Model):
@@ -55,10 +55,8 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    wine = models.ForeignKey(Wine, null=False, blank=False, on_delete=models.CASCADE)
     food = models.ForeignKey(Food, null=False, blank=False, on_delete=models.CASCADE)
-    wine_quantity = models.IntegerField(null=False, blank=False, default=0)
-    food_quantity = models.IntegerField(null=False, blank=False, default=0)
+    quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
@@ -66,4 +64,4 @@ class OrderLineItem(models.Model):
         Override the original save method to set the lineitem total
         and update the order total.
         """
-        self.lineitem_total = self.wine.price * self.wine.quantity + self.food.price * self.food.quantity
+        self.lineitem_total = self.food.price * self.quantity
