@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Wine, Food, Category
+from .models import Category, Food
 
 
 def view_products(request):
@@ -10,7 +10,6 @@ def view_products(request):
     sorting and search queries.
     """
 
-    wines = Wine.objects.all()
     foods = Food.objects.all()
     query = None
     categories = None
@@ -18,7 +17,6 @@ def view_products(request):
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
-            wines = wines.filter(category__name__in=categories)
             foods = foods.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
@@ -29,31 +27,15 @@ def view_products(request):
                 return redirect(reverse('all_products'))
 
             queries = Q(product_type__icontains=query) | Q(description__icontains=query)
-            wines = wines.filter(queries)
             foods = foods.filter(queries)
 
     context = {
-        'wines': wines,
         'foods': foods,
         'search_term': query,
         'current_categories': categories,
     }
 
     return render(request, 'products/products.html', context)
-
-
-def view_wine_details(request, wine_id):
-    """
-    A view to display full details for each wine.
-    """
-
-    wine = get_object_or_404(Wine, pk=wine_id)
-
-    context = {
-        'wine': wine
-    }
-
-    return render(request, 'products/wine_details.html', context)
 
 
 def view_food_details(request, food_id):
