@@ -34,26 +34,6 @@
                 </div>
             </div>
             {% for item in bag_items %}
-                {% if item.wine_id %}
-                <div class="row">
-                    <div class="col-2 mb-1">
-                        <a href="{% url 'wine_details' item.wine.id %}">
-                            {% if item.wine.image %}
-                                <img class="w-100" src="{{ item.wine.image.url }}" alt="{{ wine.name }}">
-                            {% else %}
-                                <img class="w-100" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ wine.name }}">
-                            {% endif %}
-                        </a>
-                    </div>
-                    <div class="col-7">
-                        <p class="my-0"><strong>{{ item.wine.name }}</strong></p>
-                        <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
-                    </div>
-                    <div class="col-3 text-right">
-                        <p class="my-0 small text-muted">${{ item.wine.price | calc_subtotal:item.quantity }}</p>
-                    </div>
-                </div>
-                {% elif item.food_id %}
                 <div class="row">
                     <div class="col-2 mb-1">
                         <a href="{% url 'food_details' item.food.id %}">
@@ -72,7 +52,6 @@
                         <p class="my-0 small text-muted">${{ item.food.price | calc_subtotal:item.quantity }}</p>
                     </div>
                 </div>
-                {% endif %}
             {% endfor %}
             <hr class="my-0">
             <div class="row text-black text-right">
