@@ -2,23 +2,55 @@
     "pk": 1,
     "model": "products.category",
     "fields": {
-        "name": "wine",
-        "friendly_name": "Wine"
+        "name": "pasta",
+        "friendly_name": "Pasta"
     }
 }, 
 {
     "pk": 2,
     "model": "products.category",
     "fields": {
-        "name": "food",
-        "friendly_name": "Food"
+        "name": "jam_marmalade",
+        "friendly_name": "Jams & Marmalades"
     }
-}, 
+},
 {
     "pk": 3,
     "model": "products.category",
     "fields": {
-        "name": "exp_type",
-        "friendly_name": "Experience Type"
+        "name": "oil_vinegar",
+        "friendly_name": "Oil & Vinegar"
+    }
+},
+{
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+        "name": "sauce",
+        "friendly_name": "Sauces"
+    }
+},
+{
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+        "name": "juice_cider",
+        "friendly_name": "Juices & Ciders"
+    }
+},
+{
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+        "name": "cookies",
+        "friendly_name": "Cookies"
+    }
+},
+{
+    "pk": 7,
+    "model": "products.category",
+    "fields": {
+        "name": "honey",
+        "friendly_name": "Honey"
     }
 }]
