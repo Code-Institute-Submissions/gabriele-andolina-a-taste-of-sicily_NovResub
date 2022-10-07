@@ -1,7 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-from products.models import Wine, Food
+from products.models import Food
 
 
 def cart_contents(request):
@@ -14,16 +14,6 @@ def cart_contents(request):
     total = 0
     product_count = 0
     cart = request.session.get('cart', {})
-
-    for wine_id, quantity in cart.items():
-        wine = get_object_or_404(Wine, pk=wine_id)
-        total += quantity * wine.price
-        product_count += quantity
-        cart_items.append({
-            'wine_id': wine_id,
-            'quantity': quantity,
-            'wine': wine,
-        })
 
     for food_id, quantity in cart.items():
         food = get_object_or_404(Food, pk=food_id)
