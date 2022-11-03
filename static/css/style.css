@@ -221,6 +221,10 @@ li > a {
     transform: scale(1.1) perspective(1px)
 }
 
+.order-confirmation-wrapper {
+    border: 1px solid #2C3333;
+}
+
 /******************** Media Queries ********************/
 
 /* For screens size of 480px and down
