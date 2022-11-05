@@ -188,12 +188,21 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-7 text-right mb-3">
+                {% if from_profile %}
+                <a href="{% url 'profile' %}" class="btn primary mt-3">
+                    <span class="icon">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back to Profile</span>
+                </a>
+                {% else %}
                 <a href="{% url 'all_products' %}" class="btn keep-shopping-btn mt-3">
                     <span class="icon">
                       <i class="fa-solid fa-chevron-left"></i>
                     </span>
                     <span class="text-uppercase">Keep Shopping</span>
-                  </a>
+                </a>
+                {% endif %}
             </div>
         </div>
         
