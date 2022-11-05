@@ -10,7 +10,7 @@
     <div class="toast-body bg-white">
         {{ message }}
     </div>
-    {% if grand_total %}
+    {% if grand_total and not on_profile_page %}
             <p class="logo-font bg-white text-black pl-1 pr-1">Your Cart ({{ product_count }})</p>
             <div class="cart-notification-wrapper">
                 {% for item in cart_items %}
