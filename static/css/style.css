@@ -34,16 +34,54 @@ image {
     font-size: 70px;
 }
 
-a:hover {
-    text-decoration: none;
+a {
+    color: #F51A12;
 }
 
-.title-a {
+a:hover {
+    text-decoration: none;
     color: #FFBB26;
 }
 
-.title-b {
+.yellow-letters {
+    color: #FFBB26;
+}
+
+.red-letters {
     color: #F51A12;
+}
+
+input {
+    border: 1px solid #2C3333;
+}
+
+/******************** Account Buttons ********************/
+
+.primary {
+    color: #FFBB26;
+    border: 1px solid #FFBB26;
+    background-color: #2C3333;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.secondary {
+    color: #F51A12;
+    border: 1px solid #F51A12;
+    background-color: #2C3333;
+    padding: 2px;
+    padding-left: 4px; 
+    padding-right: 4px; 
+}
+
+.primary:hover {
+    color: #F51A12;
+    border: 1px solid #F51A12;
+}
+
+.secondary:hover {
+    border: 1px solid #FFBB26;
+    background-color: #2C3333;
 }
 
 /******************** Navbar ********************/
