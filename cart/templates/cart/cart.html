@@ -37,7 +37,11 @@
               {% for item in cart_items %}                  
                   <tr>
                     <td>
-                      <img class="img-fluid cart-img-food" src="{{ item.food.image.url }}" alt="">
+                      {% if item.food.image %}
+                        <img class="w-100" src="{{ item.food.image.url }}" alt="{{ item.food.name }}">
+                      {% else %}
+                        <img class="w-100" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ item.food.name }}">
+                      {% endif %}
                     </td>
                     <td>
                       <p>{{ item.food.name }}</p>

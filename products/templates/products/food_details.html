@@ -14,7 +14,11 @@
         <div class="container-fluid">
             <div class="row mt-5">
                 <div class="col-lg-4 image-container offset-1">
-                    <img src="{{ food.image.url }}" class="image-fluid food-detail-img" alt="Image for {{ food.name }}">
+                    {% if food.image %}
+                        <img src="{{ food.image.url }}" class="image-fluid food-detail-img" alt="Image for {{ food.name }}">
+                    {% else %}
+                        <img class="w-100" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ item.food.name }}">
+                    {% endif %}
                 </div>
                 <div class="col-lg-6">
                     <p><em>Name:</em> {{ food.name }}</p>

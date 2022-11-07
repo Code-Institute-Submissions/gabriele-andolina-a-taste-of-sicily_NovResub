@@ -101,7 +101,7 @@
               <div class="dropdown-menu">
                 {% if request.user.is_authenticated %}
                   {% if request.user.is_superuser %}
-                  <a class="dropdown-item" href="#">Manage Shop <i class="fa-solid fa-boxes-stacked"></i></a>
+                  <a class="dropdown-item" href="{% url 'add_food_to_store' %}">Manage Shop <i class="fa-solid fa-boxes-stacked"></i></a>
                   {% endif %}
                 <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
                 <a class="dropdown-item" href="{% url 'account_logout' %}">Log Out <i class="fa-solid fa-right-from-bracket"></i></a>

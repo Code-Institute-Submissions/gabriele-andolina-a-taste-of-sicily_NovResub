@@ -27,7 +27,7 @@ def view_products(request):
                 messages.error(request, "Don't forget to tell us what you're looking for!")
                 return redirect(reverse('all_products'))
 
-            queries = Q(product_type__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
             foods = foods.filter(queries)
 
     context = {
@@ -55,7 +55,17 @@ def view_food_details(request, food_id):
 
 def add_food_to_store(request):
     """ Add a food product to the store """
-    form = FoodForm()
+    if request.method == 'POST':
+        form = FoodForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Well done! Your new product is now in the store.')
+            return redirect(reverse('add_food_to_store'))
+        else:
+            messages.error(request, 'Oops! Something went wrong. Please ensure the form is valid.')
+    else:
+        form = FoodForm()
+
     template = 'products/add_food_to_store.html'
     context = {
         'form': form,

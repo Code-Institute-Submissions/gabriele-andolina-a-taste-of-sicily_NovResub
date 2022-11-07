@@ -17,7 +17,11 @@
                     {% if item.food_id %}
                     <div class="row pl-1 pr-1 mb-1">
                         <div class="col-3">
-                            <img class="w-100" src="{{ item.food.image.url }}">
+                            {% if item.food.image %}
+                            <img class="w-100" src="{{ item.food.image.url }}" alt="{{ item.food.name }}">
+                            {% else %}
+                            <img class="w-100" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ item.food.name }}">
+                            {% endif %}
                         </div>
                         <div class="col-9">
                             <p class="my-0"><strong>{{ item.food.name }}</strong></p>
