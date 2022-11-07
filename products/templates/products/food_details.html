@@ -13,11 +13,15 @@
     <div class="overlay"></div>
         <div class="container-fluid">
             <div class="row mt-5">
-                <div class="col-lg-4 image-container offset-1">
+                <div class="col-lg-4 image-container text-center">
                     {% if food.image %}
                         <img src="{{ food.image.url }}" class="image-fluid food-detail-img" alt="Image for {{ food.name }}">
                     {% else %}
                         <img class="w-100" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ item.food.name }}">
+                    {% endif %}
+                    {% if request.user.is_superuser %}
+                            <a class="btn text-uppercase edit-btn mt-2" href="{% url 'edit_food_in_store' food.id %}">Edit</a> 
+                            <a class="btn text-uppercase delete-btn mt-2" href="{% url 'delete_food_from_store' food.id %}">Delete</a>
                     {% endif %}
                 </div>
                 <div class="col-lg-6">
@@ -69,7 +73,7 @@
                             <a href="{% url 'all_products' %}" class="btn keep-shopping-btn">
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn text-uppercase add-to-cart" value="Add to Cart">
+                            <input type="submit" class="btn text-uppercase add-to-cart-btn" value="Add to Cart">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>

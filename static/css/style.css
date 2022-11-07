@@ -126,14 +126,41 @@ li > a {
     font-family: 'Dancing Script', Times New Roman, sans-serif;
 }
 
-.shop-now-btn, .keep-shopping-btn {
+/******************** Buttons ********************/
+
+.shop-now-btn, .add-to-cart-btn {
+    background-color: #2C3333;
     color: #FFBB26;
     border: 1px solid #FFBB26;
 }
 
-.shop-now-btn:hover, .keep-shopping-btn:hover {
+.shop-now-btn:hover, .add-to-cart-btn:hover {
     color: #F51A12;
     border-color: #F51A12;
+}
+
+.keep-shopping-btn {
+    background-color: #2C3333;
+    color: #F51A12;
+    border: 1px solid #F51A12;
+}
+
+.keep-shopping-btn:hover {
+    background-color: #2C3333;
+    color: #FFBB26;
+    border-color: #FFBB26;
+}
+
+.edit-btn, .delete-btn:hover {
+    color: #FFBB26;
+    border: 1px solid #FFBB26;
+    background-color: #2C3333;
+}
+
+.edit-btn:hover, .delete-btn {
+    color: #F51A12;
+    border-color: #F51A12;
+    background-color: #2C3333;
 }
 
 /******************** Products Template ********************/
@@ -172,17 +199,6 @@ li > a {
     border: 1px solid #2C3333;
 }
 
-.add-to-cart {
-    background-color: #2C3333;
-    color: #F51A12;
-    border: 1px solid #F51A12;
-}
-
-.add-to-cart:hover {
-    background-color: #2C3333;
-    color: #FFBB26;
-    border-color: #FFBB26;
-}
 /******************** Product Details Section ********************/
 
 .keep-shopping-btn, .checkout-btn {
@@ -199,10 +215,6 @@ li > a {
     background-color: #2C3333;
     color: #FFBB26;
 }
-
-/* .form-group {
-    width: 20vw;
-} */
 
 .update-link, .remove-food-item {
     cursor: pointer;

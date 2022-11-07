@@ -14,7 +14,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-10 offset-1 products-title text-center">
-        <h2>PRODUCTS</h2>
+        <h2 class="text-uppercase">Products</h2>
       </div>
       <hr class="w-50 mx-auto mt-2">
     </div>
@@ -39,6 +39,12 @@
               <div>
                 <p>€ {{ food.price }}</p>
               </div>
+              {% if request.user.is_superuser %}
+                <div class="mb-2">
+                    <a class="btn text-uppercase edit-btn" href="{% url 'edit_food_in_store' food.id %}">Edit</a> 
+                    <a class="btn text-uppercase delete-btn" href="{% url 'delete_food_from_store' food.id %}">Delete</a>
+                </div>
+              {% endif %}
             </div>
           </div>
           {% endfor %}
