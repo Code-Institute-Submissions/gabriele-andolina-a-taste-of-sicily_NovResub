@@ -58,9 +58,9 @@ def add_food_to_store(request):
     if request.method == 'POST':
         form = FoodForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            messages.success(request, 'Well done! Your new product is now in the store.')
-            return redirect(reverse('add_food_to_store'))
+            food = form.save()
+            messages.success(request, f'Well done! Your new product "{ food.name }" is now in the store.')
+            return redirect(reverse('food_details', args=[food.id]))
         else:
             messages.error(request, 'Oops! Something went wrong. Please ensure the form is valid.')
     else:
@@ -81,13 +81,13 @@ def edit_food_in_store(request, food_id):
         form = FoodForm(request.POST, request.FILES, instance=food)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Great! You have successfully edited your {food.name} product.')
+            messages.success(request, f'Great! You have successfully edited your "{food.name}" product.')
             return redirect(reverse('food_details', args=[food.id]))
         else:
             messages.error(request, 'Oops! Something went wrong. Please ensure the form is valid.')
     else:
         form = FoodForm(instance=food)
-        messages.info(request, f'You are editing your {food.name} product.')
+        messages.info(request, f'You are editing your "{food.name}" product.')
 
     template = 'products/edit_food_in_store.html'
     context = {
@@ -96,3 +96,11 @@ def edit_food_in_store(request, food_id):
     }
 
     return render(request, template, context)
+
+
+def delete_food_from_store(request, food_id):
+    """ A view to delete a food item from the store """
+    food = get_object_or_404(Food, pk=food_id)
+    food.delete()
+    messages.success(request, f'The "{ food.name }" product has been successfully deleted!')
+    return redirect(reverse('all_products'))
