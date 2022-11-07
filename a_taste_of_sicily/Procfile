@@ -1,1 +1,1 @@
-web: gunicorn a-taste-of-sicily.wsgi:application
+web: gunicorn a_taste_of_sicily.wsgi:application
