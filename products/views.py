@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Category, Food
+from .forms import FoodForm
 
 
 def view_products(request):
@@ -51,3 +52,13 @@ def view_food_details(request, food_id):
 
     return render(request, 'products/food_details.html', context)
 
+
+def add_food_to_store(request):
+    """ Add a food product to the store """
+    form = FoodForm()
+    template = 'products/add_food_to_store.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
