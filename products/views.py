@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Category, Food
 from .forms import FoodForm
@@ -53,8 +54,13 @@ def view_food_details(request, food_id):
     return render(request, 'products/food_details.html', context)
 
 
+@login_required
 def add_food_to_store(request):
     """ A view to add a food item to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = FoodForm(request.POST, request.FILES)
         if form.is_valid():
@@ -74,8 +80,13 @@ def add_food_to_store(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_food_in_store(request, food_id):
     """ A view to edit a food item present in the store. """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     food = get_object_or_404(Food, pk=food_id)
     if request.method == 'POST':
         form = FoodForm(request.POST, request.FILES, instance=food)
@@ -98,8 +109,13 @@ def edit_food_in_store(request, food_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_food_from_store(request, food_id):
     """ A view to delete a food item from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     food = get_object_or_404(Food, pk=food_id)
     food.delete()
     messages.success(request, f'The "{ food.name }" product has been successfully deleted!')

@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+ontrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import UserProfile
 from .forms import UserProfileForm
@@ -7,6 +9,7 @@ from .forms import UserProfileForm
 from checkout.models import Order
 
 
+@login_required
 def view_profile(request):
     """ A view to display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -34,11 +37,6 @@ def view_profile(request):
 
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
-
-    # messages.info(request, (
-    #     f'This is a past confirmation for order number {order_number}. '
-    #     'A confirmation email was sent on the order date.'
-    # ))
 
     template = 'checkout/checkout_success.html'
     context = {
