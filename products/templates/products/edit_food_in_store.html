@@ -16,19 +16,19 @@
             <div class="col-12 col-md-6">
                 <hr>
                 <h2 class="logo-font mb-4 text-uppercase">Product Management</h2>
-                <h5 class="text-muted">Add a Food Item</h5>
+                <h5 class="text-muted">Edit a Food Item</h5>
                 <hr>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'add_food_to_store' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_food_in_store' food.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div>
                         <a class="btn secondary text-uppercase" href="{% url 'all_products' %}">Cancel</a>
-                        <button class="btn primary text-uppercase" type="submit">Add Item</button>
+                        <button class="btn primary text-uppercase" type="submit">Edit Item</button>
                     </div>
                 </form>
             </div>            
