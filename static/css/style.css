@@ -200,9 +200,9 @@ li > a {
     color: #FFBB26;
 }
 
-.form-group {
+/* .form-group {
     width: 20vw;
-}
+} */
 
 .update-link, .remove-food-item {
     cursor: pointer;
