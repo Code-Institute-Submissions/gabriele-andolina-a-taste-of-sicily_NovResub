@@ -54,7 +54,7 @@ def view_food_details(request, food_id):
 
 
 def add_food_to_store(request):
-    """ Add a food product to the store """
+    """ A view to add a food item to the store """
     if request.method == 'POST':
         form = FoodForm(request.POST, request.FILES)
         if form.is_valid():
@@ -69,6 +69,30 @@ def add_food_to_store(request):
     template = 'products/add_food_to_store.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_food_in_store(request, food_id):
+    """ A view to edit a food item present in the store. """
+    food = get_object_or_404(Food, pk=food_id)
+    if request.method == 'POST':
+        form = FoodForm(request.POST, request.FILES, instance=food)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Great! You have successfully edited your {food.name} product.')
+            return redirect(reverse('food_details', args=[food.id]))
+        else:
+            messages.error(request, 'Oops! Something went wrong. Please ensure the form is valid.')
+    else:
+        form = FoodForm(instance=food)
+        messages.info(request, f'You are editing your {food.name} product.')
+
+    template = 'products/edit_food_in_store.html'
+    context = {
+        'form': form,
+        'food': food,
     }
 
     return render(request, template, context)
