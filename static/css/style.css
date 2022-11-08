@@ -205,6 +205,12 @@ li > a {
     background-color: #2C3333;
 }
 
+/******************** Experience Details Section ********************/
+
+.experience-detail-img {
+    height: 35vh;
+}
+
 /******************** Cart ********************/
 
 .cart-img-food {
@@ -275,6 +281,9 @@ li > a {
     border: 1px solid #2C3333;
 }
 
+img {
+    height: 50%;
+}
 
 /******************** Media Queries ********************/
 
