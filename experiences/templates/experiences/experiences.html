@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+      <div class="row">
+        <div class="col"></div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-10 offset-1 products-title text-center">
+        <h2 class="text-uppercase">Experiences</h2>
+      </div>
+      <hr class="w-50 mx-auto mt-2">
+    </div>
+    <div class="row">
+      <div class="col-10 offset-1">
+        <div class="row">
+          {% for experience in experiences %}
+          <div class="col-sm-6 col-md-6 col-lg-4 mb-4">  
+            <div class="card h-100 text-center mx-auto">
+              {% if experience.image %}
+              <a href="#">
+                <img class="card-img-top img-fluid" src="{{ experience.image.url }}" alt="{{ experience.name }}">
+              </a>
+              {% else %}
+              <a href="#">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ experience.name }}"> 
+              </a>
+              {% endif %}
+              <div class="card-body my-auto">
+                <p>{{ experience.name }}</p>
+              </div>
+              <div>
+                <p>€ {{ experience.price }}</p>
+              </div>
+              {% if request.user.is_superuser %}
+                <div class="mb-2">
+                    <a class="btn text-uppercase edit-btn" href="#">Edit</a> 
+                    <a class="btn text-uppercase delete-btn" href="#">Delete</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+  </div>
+{% endblock %}
