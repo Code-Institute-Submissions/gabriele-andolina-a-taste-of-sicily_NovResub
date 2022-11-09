@@ -32,3 +32,12 @@ class Food(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Pairing(models.Model):
+    main = models.ForeignKey('Food', null=True, blank=True, on_delete=models.SET_NULL)
+    wine = models.CharField(max_length=255, null=True, blank=True)
+    recipes = models.TextField()
+
+    def __str__(self):
+        return self.name
