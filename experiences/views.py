@@ -58,3 +58,33 @@ def add_experience(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def edit_experience(request, experience_id):
+    """ A view to edit an experience item present on the website. """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    experience = get_object_or_404(Experience, pk=experience_id)
+    if request.method == 'POST':
+        form = ExperienceForm(request.POST, request.FILES, instance=experience)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Great! You have successfully edited your "{experience.name}" experience.')
+            return redirect(reverse('experience_details', args=[experience.id]))
+        else:
+            messages.error(request, 'Oops! Something went wrong. Please ensure the form is valid.')
+    else:
+        form = ExperienceForm(instance=experience)
+        messages.info(request, f'You are editing your "{experience.name}" experience.')
+
+    template = 'experiences/edit_experience.html'
+    context = {
+        'form': form,
+        'experience': experience,
+    }
+
+    return render(request, template, context)
+
