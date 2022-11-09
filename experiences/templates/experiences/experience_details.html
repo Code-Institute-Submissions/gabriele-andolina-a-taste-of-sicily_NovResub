@@ -21,7 +21,7 @@
                     {% endif %}
                     {% if request.user.is_superuser %}
                             <a class="btn text-uppercase edit-btn mt-2" href="{% url 'edit_experience' experience.id %}">Edit</a> 
-                            <a class="btn text-uppercase delete-btn mt-2" href="#">Delete</a>
+                            <a class="btn text-uppercase delete-btn mt-2" href="{% url 'delete_experience' experience.id %}">Delete</a>
                     {% endif %}
                 </div>
             </div>
