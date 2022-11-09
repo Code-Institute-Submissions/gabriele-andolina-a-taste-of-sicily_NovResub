@@ -20,7 +20,7 @@
                         <img src="{{ MEDIA_URL }}no_image.jpg" class="image-fluid experience-detail-img" alt="{{ item.experience.name }}">
                     {% endif %}
                     {% if request.user.is_superuser %}
-                            <a class="btn text-uppercase edit-btn mt-2" href="#">Edit</a> 
+                            <a class="btn text-uppercase edit-btn mt-2" href="{% url 'edit_experience' experience.id %}">Edit</a> 
                             <a class="btn text-uppercase delete-btn mt-2" href="#">Delete</a>
                     {% endif %}
                 </div>

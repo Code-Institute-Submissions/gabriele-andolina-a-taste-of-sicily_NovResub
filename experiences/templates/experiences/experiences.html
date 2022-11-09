@@ -51,7 +51,7 @@
               </div>
               {% if request.user.is_superuser %}
                 <div class="mb-4">
-                    <a class="btn text-uppercase edit-btn" href="#">Edit</a> 
+                    <a class="btn text-uppercase edit-btn" href="{% url 'edit_experience' experience.id %}">Edit</a> 
                     <a class="btn text-uppercase delete-btn" href="#">Delete</a>
                 </div>
               {% endif %}
