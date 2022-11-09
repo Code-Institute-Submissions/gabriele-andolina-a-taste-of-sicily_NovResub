@@ -20,7 +20,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <div class="row">
+        <div class="row justify-content-center">
           {% for experience in experiences %}
           <div class="col-sm-6 col-md-6 col-lg-4 mb-4">  
             <div class="card h-100 text-center mx-auto">
@@ -35,9 +35,6 @@
               {% endif %}
               <div class="card-body my-auto">
                 <p>{{ experience.name }}</p>
-              </div>
-              <div>
-                <p>€ {{ experience.price }}</p>
               </div>
               {% if request.user.is_superuser %}
                 <div class="mb-4">
