@@ -15,11 +15,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECRET_KEY = '&$yp_dzyc**h4s9v3h^*)v7veuv@5up00f!xc#+zp2tt_lwn3l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
-# DEBUG = True
+# DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['a-taste-of-sicily.herokuapp.com', 'localhost']
-# ALLOWED_HOSTS = []
 
 
 # Application definition
