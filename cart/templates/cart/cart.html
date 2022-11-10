@@ -20,7 +20,7 @@
     </div>
 
     <div class="row">
-      <div class="col-10 offset-1 cart-title">
+      <div class="col-12 cart-title">
         {% if cart_items %}
           <div class="table-responsive rounded">
             <table class="table table-sm">
@@ -38,9 +38,9 @@
                   <tr>
                     <td>
                       {% if item.food.image %}
-                        <img class="w-100" src="{{ item.food.image.url }}" alt="{{ item.food.name }}">
+                        <img class="cart-img" src="{{ item.food.image.url }}" alt="{{ item.food.name }}">
                       {% else %}
-                        <img class="w-100" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ item.food.name }}">
+                        <img class="cart-img" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ item.food.name }}">
                       {% endif %}
                     </td>
                     <td>
@@ -106,14 +106,14 @@
           </div>
         {% else %}
           <p class="lead">Your cart is empty.</p>
+        {% endif %}
           <a href="{% url 'all_products' %}" class="btn keep-shopping-btn mt-3">
             <span class="icon">
               <i class="fa-solid fa-chevron-left"></i>
             </span>
             <span class="text-uppercase">Keep Shopping</span>
           </a>
-        {% endif %}
-        <a href="{% url 'checkout' %}" class="btn keep-shopping-btn mt-3">
+        <a href="{% url 'checkout' %}" class="btn checkout-btn mt-3">
           <span class="icon">
             <i class="fa-solid fa-lock"></i>
           </span>

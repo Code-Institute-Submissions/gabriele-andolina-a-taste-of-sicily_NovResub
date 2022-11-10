@@ -20,10 +20,6 @@ body {
     font-weight: 400;
 }
 
-image {
-    height: 100px;
-}
-
 .site-title {
     background-color: #2C3333;
     width: 100vw;
@@ -213,8 +209,8 @@ li > a {
 
 /******************** Cart ********************/
 
-.cart-img-food {
-    height: 10vh;
+.cart-img {
+    height: 15vh;
 }
 
 .plus-minus-btn {
@@ -252,6 +248,7 @@ li > a {
 .checkout-btn {
     background-color: #2C3333;
     color: #FFBB26;
+    border: 1px solid #FFBB26;
 }
 
 .checkout-btn:hover {
@@ -279,10 +276,6 @@ li > a {
 
 .order-confirmation-wrapper {
     border: 1px solid #2C3333;
-}
-
-img {
-    height: 50%;
 }
 
 /******************** Media Queries ********************/
