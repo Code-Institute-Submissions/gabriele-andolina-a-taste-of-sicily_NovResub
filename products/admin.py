@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Food
+from .models import Category, Food, Pairing
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -19,5 +19,14 @@ class FoodAdmin(admin.ModelAdmin):
     ordering = ('name',)
 
 
+class PairingAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+    )
+
+    ordering = ('name',)
+
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Food, FoodAdmin)
+admin.site.register(Pairing, PairingAdmin)
