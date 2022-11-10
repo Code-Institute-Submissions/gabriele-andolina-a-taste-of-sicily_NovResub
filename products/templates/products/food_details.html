@@ -32,16 +32,14 @@
                     <p><em>Description:</em> {{ food.description }}</p>
                     <p><em>Format</em>:</em> {{ food.format }}</p>
                     <p><em>Place of origin:</em> {{ food.place_of_origin }}</p>
-                    <p><em>Price:</em> € {{ food.price }}</p>         
                     {% if food.pairings %}
                     <p><em>Pairing:</em>
                         {% for pairing in food.pairings.all %}
-                            {{ pairing.name }}
-                    </p>
+                        {{ pairing.name }}
                         {% endfor %}
-                    {% else %}
-                    <p><em>Pairing:</em> N/A </p>
+                    </p>
                     {% endif %}
+                    <p><em>Price:</em> € {{ food.price }}</p>       
                     {% if food.vegan_ok %}
                     <span><img src="{{ food.vegan_ok.url }}" class="vegan-ok" alt="Vegan Ok logo"></span>
                     {% endif %}
