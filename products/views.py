@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Category, Food
+from .models import Category, Food, Pairing
 from .forms import FoodForm
 
 
@@ -46,9 +46,12 @@ def view_food_details(request, food_id):
     """
 
     food = get_object_or_404(Food, pk=food_id)
+    pairings = food.pairings.all()
 
     context = {
-        'food': food
+        'food': food,
+        'pairings': pairings,
+
     }
 
     return render(request, 'products/food_details.html', context)
