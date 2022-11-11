@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -158,6 +160,24 @@ def checkout_success(request, order_number):
     messages.success(request, f'Your order was successfully placed! \
         Your order number is {order_number}. A confirmation \
             e-mail will be sent to {order.email}.')
+
+    def _send_confirmation_email(order):
+        """Send the user a confirmation email"""
+        customer_email = order.email
+        subject = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_subject.txt',
+            {'order': order})
+        body = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_body.txt',
+            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [customer_email]
+        )
+    _send_confirmation_email(order)
 
     if 'cart' in request.session:
         del request.session['cart']
