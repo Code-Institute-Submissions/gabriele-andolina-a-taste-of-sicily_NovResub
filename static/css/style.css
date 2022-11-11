@@ -356,3 +356,19 @@ footer p, footer a, footer i {
 }
 
 
+/* For screens size of 820px and down */
+
+@media screen and (max-width: 820px) {
+    
+    .jumbotron {
+        top: 20vh;
+        height: 350px;
+    }
+
+    .experience-detail-img {
+        height: 25vh;
+
+    }
+
+}
+
