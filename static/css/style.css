@@ -302,7 +302,6 @@ footer p, footer a, footer i {
 #mc_embed_signup {
     background:#2C3333; 
     color: #FFBB26; 
-   
     font:14px 'AndadaPro', 'Times New Roman', sans-serif;  
     width:600px; 
     border: 1px solid #FFBB26;
@@ -319,6 +318,7 @@ footer p, footer a, footer i {
     background-color: #FFBB26;
     color: #2C3333;
 }
+
 /******************** Media Queries ********************/
 
 /* For screens size of 1200px and down */
@@ -353,6 +353,7 @@ footer p, footer a, footer i {
     .food-detail-img {
         height: 20vh;
     }
+
 }
 
 
@@ -368,6 +369,48 @@ footer p, footer a, footer i {
     .experience-detail-img {
         height: 25vh;
 
+    }
+
+}
+
+/* For screens size of 680px and down */
+
+@media screen and (max-width: 680px) {
+
+    #shop-name {
+        font-family: 'Dancing Script', 'Times New Roman', sans-serif;
+        font-size: 50px;
+    }
+    
+    .jumbotron {
+        top: 20vh;
+        height: 400px;
+        margin-bottom: 200px;
+    }
+
+    .navbar {
+        max-height: 160px;
+        overflow-y: scroll;
+     }
+
+    .experience-detail-img {
+        height: 25vh;
+    }
+
+    #mc_embed_signup {
+        background:#2C3333; 
+        color: #FFBB26; 
+        font: 10px 'AndadaPro', 'Times New Roman', sans-serif;  
+        width: 400px; 
+        border: 1px solid #FFBB26;
+    }
+
+    .food-detail-img {
+        height: 40vh;
+    }
+
+    .experience-detail-img {
+        height: 40vh;
     }
 
 }
