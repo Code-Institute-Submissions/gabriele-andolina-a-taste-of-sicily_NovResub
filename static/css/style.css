@@ -321,6 +321,21 @@ footer p, footer a, footer i {
 
 /******************** Media Queries ********************/
 
+/* For screens size of 1200px and up */
+
+@media screen and (min-width: 1200px) {
+
+    .food-detail-img {
+        height: 40vh;
+    }
+
+    .experience-detail-img {
+        height: 40vh;
+
+    }
+
+}
+
 /* For screens size of 1200px and down */
 
 @media screen and (max-width: 1200px) {
