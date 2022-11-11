@@ -415,3 +415,36 @@ footer p, footer a, footer i {
 
 }
 
+
+/* For screens size of 420px and down */
+
+@media screen and (max-width: 420px) {
+    
+    .jumbotron {
+        top: 20vh;
+        height: 420px;
+        margin-bottom: 200px;
+    }
+
+    .experience-detail-img {
+        height: 25vh;
+    }
+
+    #mc_embed_signup {
+        background:#2C3333; 
+        color: #FFBB26; 
+        font: 10px 'AndadaPro', 'Times New Roman', sans-serif;  
+        width: 355px; 
+        border: 1px solid #FFBB26;
+    }
+
+    .food-detail-img {
+        height: 20vh;
+        margin-bottom: 20px;
+    }
+
+    .experience-detail-img {
+        height: 20vh;
+    }
+
+}
