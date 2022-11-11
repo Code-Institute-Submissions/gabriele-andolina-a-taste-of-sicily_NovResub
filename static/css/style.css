@@ -321,6 +321,26 @@ footer p, footer a, footer i {
 }
 /******************** Media Queries ********************/
 
+/* For screens size of 1200px and down */
+
+@media screen and (max-width: 1200px) {
+    
+    .jumbotron {
+        top: 10vh;
+        height: 320px;
+    }
+
+    .food-detail-img {
+        height: 40vh;
+    }
+
+    .experience-detail-img {
+        height: 40vh;
+
+    }
+
+}
+
 /* For screens size of 1024px and down */
 
 @media screen and (max-width: 1024px) {
@@ -334,3 +354,5 @@ footer p, footer a, footer i {
         height: 20vh;
     }
 }
+
+
