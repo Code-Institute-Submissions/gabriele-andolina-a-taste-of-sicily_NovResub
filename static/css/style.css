@@ -8,16 +8,21 @@
     border: none;
 }
 
-/* html {
+html {
     height: 100%;
-} */
+    box-sizing: border-box;
+}
 
 body {
     background: url('/media/hero_image.jpg');
     background-size: cover;
-    height: 100%;
     font-family: "Andada Pro", "Times New Roman", sans-serif;
     font-weight: 400;
+    position: relative;
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: inherit;
+    padding-bottom: 180px;
 }
 
 .site-title {
@@ -277,55 +282,21 @@ li > a {
     border: 1px solid #2C3333;
 }
 
+/******************** Footer ********************/
+
+.footer {
+    background-color: #2C3333;
+    color: #FFBB26;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+footer p, footer a, footer i {
+    color: #FFBB26;
+}
+
 /******************** Media Queries ********************/
 
-/* For screens size of 480px and down
-
-@media screen and (max-width: 440px) {
-    
-    .jumbotron {
-        width: 70vw;
-        left: 15vw;
-        top: 30vh;
-        height: 300px;
-        margin-bottom: 20px;
-    }
-    
-    .header-container {
-        padding-top: 400px;
-    }
-}
-
-/* For screens size of 480px and down */
-
-@media screen and (max-width: 480px) {
-    
-    .jumbotron {
-        top: 50px;
-        height: 300px;
-    }
-    
-    .header-container {
-        margin-top: 100px;
-    }
-}
-
-/* For screens size of 820px and down */
-
-@media screen and (max-width: 820px) {
-    .jumbotron {
-        width: 70vw;
-        top: 10px;
-        left: 15vw;
-        height: 250px;
-        margin-bottom: 20px;
-    }
-
-    .header-container {
-        padding-top: 50px;
-    }
-
-    .jumbotron {
-        top: 40vh;
-    }
-}
