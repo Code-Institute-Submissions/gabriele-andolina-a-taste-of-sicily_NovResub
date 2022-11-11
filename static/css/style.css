@@ -22,7 +22,7 @@ body {
     margin: 0;
     min-height: 100vh;
     box-sizing: inherit;
-    padding-bottom: 180px;
+    padding-bottom: 400px;
 }
 
 .site-title {
@@ -282,7 +282,7 @@ li > a {
     border: 1px solid #2C3333;
 }
 
-/******************** Footer ********************/
+/******************** Footer & Mailchimp Form ********************/
 
 .footer {
     background-color: #2C3333;
@@ -298,5 +298,25 @@ footer p, footer a, footer i {
     color: #FFBB26;
 }
 
+#mc_embed_signup {
+    background:#2C3333; 
+    color: #FFBB26; 
+   
+    font:14px 'AndadaPro', 'Times New Roman', sans-serif;  
+    width:600px; 
+    border: 1px solid #FFBB26;
+}
+
+.mailchimp-btn {
+    border: 1px solid #FFBB26;
+    background-color: #2C3333;
+    color: #FFBB26;
+}
+
+.mailchimp-btn:hover {
+    border: 1px solid #2C3333;
+    background-color: #FFBB26;
+    color: #2C3333;
+}
 /******************** Media Queries ********************/
 
