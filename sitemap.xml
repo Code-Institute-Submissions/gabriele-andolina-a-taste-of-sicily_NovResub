@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/?category=pasta,jam_marmalade,oil_vinegar,sauce,juice_cider,cookies,honey</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/?category=pasta</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/?category=jam_marmalade</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/?category=oil_vinegar</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/?category=sauce</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/?category=juice_cider</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/?category=cookies</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/?category=honey</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/experiences/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/cart/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/1/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/2/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/3/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/4/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/5/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/6/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/7/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/8/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/9/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/10/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/11/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/12/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/13/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/14/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/15/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/16/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/17/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/18/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/products/food/19/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/experiences/experience/1/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/experiences/experience/2/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://a-taste-of-sicily.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-11-10T23:46:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

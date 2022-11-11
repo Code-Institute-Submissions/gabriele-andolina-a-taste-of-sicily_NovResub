@@ -8,9 +8,9 @@
     border: none;
 }
 
-html {
+/* html {
     height: 100%;
-}
+} */
 
 body {
     background: url('/media/hero_image.jpg');
@@ -111,7 +111,6 @@ li > a {
 .jumbotron {
     width: 40vw;
     position: relative;
-    left: 30vw;
     top: 8vh;
     background-color: #2C3333;
     height: 250px;

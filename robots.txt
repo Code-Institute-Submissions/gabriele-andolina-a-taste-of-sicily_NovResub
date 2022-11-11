@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /cart/
+Sitemap: https://a-taste-of-sicily.herokuapp.com/sitemap.xml

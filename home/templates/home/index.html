@@ -10,8 +10,13 @@
 {% endblock %}
 
 {% block content %}
-  <div class="jumbotron text-center">
-    <h2><span class="yellow-letters">Gourmet products</span><br><span class="red-letters">from the heart of Sicily.</span><br></h2>
-    <a class="btn btn-lg mt-4 shop-now-btn" href="{% url 'all_products' %}" role="button">SHOP NOW</a>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4 jumbotron text-center">
+        <h2><span class="yellow-letters">Gourmet products</span><br><span class="red-letters">from the heart of Sicily.</span><br></h2>
+        <a class="btn btn-lg mt-4 shop-now-btn" href="{% url 'all_products' %}" role="button">SHOP NOW</a>
+    </div>
   </div>
+</div>
+
 {% endblock %}
