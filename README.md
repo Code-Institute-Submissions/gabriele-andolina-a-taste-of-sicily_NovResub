@@ -29,9 +29,6 @@ A detailed report regarding user stories and agile development can be found here
 
 
 ## **4. Features**
-### 4.1 *Existing features*
-
-This section will provide an overview of the website. Where available, two different screenshots of each page/section will be provided, in order to show the difference in outlook depending on the status of the user (not/authenticated).
 
 * Homepage
 
@@ -125,57 +122,37 @@ The homepage concisely informs users of what the website is and what to expect f
 
 ## **5. SEO & Marketing** 
 
-### **SEO**
-
 A detailed report regarding SEO and the marketing-related thought process can be found here: [SEO & Marketing docs](docs/seo_marketing.md).
 
 
-## **5. Validation and Performance**
-### 5.1 *Validator Testing*
+## **6. Validation and Performance**
+### 6.1 *Validator Testing*
 * HTML
-   * The final version of the code is free of errors when passed through the official W3C Markup Validator via URI.  
-   However, a difference was noted upon checking the .html files individually as opposed to validation via URI. Since this is a Django-based project, the source code had to be retrieved by right-clicking on each page in the front-end, then selecting the "View page source" option. In fact, the markup validation service is not able to recognize the Jinja templating language and throws several errors because of this.
+   * Some errors are shown in the deployed version of the code when passed through the official W3C Markup Validator via URI.  
+   These do not affect the correct functioning of the website, but need to be addressed during the following stages of the development process.
 
-   ![W3C HTML Validation](documentation/images/html-validation.png)
+   ![W3C HTML Validation](docs/images/html-validation.png)
 
 * CSS 
    * No errors were found when passing through the official W3C Jigsaw Validator.
 
-   ![W3C CSS Validation](documentation/images/css-validation.png)
+   ![W3C CSS Validation](docs/images/css-validation.png)
 
 * PEP8
-   * The .py files in the blog and logbook apps were passed individually through the https://www.pythonchecker.com/ PEP8 validator. The general results vary in style accuracy from around 50% to more than 90%, showing however no errors. In order to explain this gap in results, two things need to be noted here: 
-     1) The lower results are mostly due to unimplemented suggestions with regard to spacing before and after some operators (such as, for instance, the "=" sign); in this case, I have decided not to implement the given suggestions as they were not crucial to the overall style or syntax.
-     2) Some indentation warnings not raised by the linter in the Gitpod environment were instead raised by the above mentioned checker. In this case, I have thought it safest to follow the suggestions of the linter in Gitpod, since it is there that the code was written. The indentation warnings were, in any case, merely related to the breaking of a function's arguments into two lines (for matters of overall line length) and were not strictly syntactic errors.  
+   * The .py files in the project were checked with the Python linter within the Gitpod environment during the whole development process, ensuring that no key errors were committed.
 
-### 5.2 *Responsiveness*
+### 6.2 *Responsiveness*
 The site is fully responsive. 
 Manual testing has been performed on the following three devices:  
 - MacBook Pro (Retina, 13 inch, Late 2013);
 - iPad Pro (12.9 inch, Third Generation);
 - iPhone 6 (on Google Developer Tools).
 
-### 5.3 *Lighthouse Report*
-
-* Mobile
-
-![Lighthouse report for mobile](documentation/images/lighthouse-report-mobile.png)
-
-As observable in the report screenshot, mobile performance is lower on mobile than on desktop. This will be improved in future versions of the project by applying modifications such as, for instance, those related to the size of the images.
-
-* Desktop
-
-![Lighthouse report for desktop](documentation/images/lighthouse-report.png)
-
-### 5.4 *Accessibility*
-
-A first Lighthouse report returned a score of 79/100 for accessibility, due to several missing aria-label attributes on buttons and links. After implementing the due corrections, the final score is 97/100.
-
-### 5.4 *Internal links*
+### 6.3 *Internal links*
 
 Every link on the website is fully functioning.
 
-## **6. Testing and Bugs**
+## **7. Testing and Bugs**
 
 The manual tests run on the project can be found here: [Testing](docs/testing.md).  
 User stories tests can be found here: [User Stories & Agile Development](docs/Agile.md).  

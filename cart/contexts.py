@@ -5,10 +5,6 @@ from products.models import Food
 
 
 def cart_contents(request):
-    # This is the main delivery logic; however, when the time comes to allow users to complete
-    # payments, this will need to be updated: customers from Italy (will have to use their address as the key discriminant)
-    # will get free delivery no matter what the grand_total is, whereas the following logic will apply to
-    # customers from Europe.
 
     cart_items = []
     total = 0
