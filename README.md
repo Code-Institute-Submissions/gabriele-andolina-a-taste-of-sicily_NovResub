@@ -123,6 +123,12 @@ The homepage concisely informs users of what the website is and what to expect f
 
 ![404 error page](docs/images/19-404.png)
 
+## **5. SEO & Marketing** 
+
+### **SEO**
+
+A detailed report regarding SEO and the marketing-related thought process can be found here: [SEO & Marketing docs](docs/seo_marketing.md).
+
 
 ## **5. Validation and Performance**
 ### 5.1 *Validator Testing*
